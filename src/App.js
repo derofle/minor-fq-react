@@ -12,7 +12,8 @@ class App extends Component {
 
   state = {
     story: [],
-    storyProgress: 1
+    storyProgress: 1,
+    cogPressed: false
   }
 
   static propTypes = {
@@ -57,16 +58,31 @@ class App extends Component {
     })
   }
 
+  openSettings = () => {
+      this.setState({
+        cogPressed: true
+      })
+  }
+
+  closeSettings = () => {
+    this.setState({
+      cogPressed: false
+    })
+  }
+
   render() {
     if (!this.state.story[this.state.storyProgress]) return (
       <div className="dialogue-window"></div>
     );
     return (
       <Fragment>
-        <img src={cogIcon} className="settings-icon" alt="settings-icon"/>
+        <img src={cogIcon} className="settings-icon" alt="settings-icon" onClick={this.openSettings}/>
+        
         <div className="dialogue-window">
           <DialogueBox details={this.state.story[this.state.storyProgress]} nextDialogue={this.nextDialogue}/>
+          <Settings cogPressed={this.state.cogPressed} closeSettings={this.closeSettings}/>
         </div>
+        
       </Fragment>
     );
   }
