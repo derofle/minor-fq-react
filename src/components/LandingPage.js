@@ -1,29 +1,46 @@
-import React from 'react';
-import Background from "../images/spacewindow.png";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-const backgroundStyle = {
-    width: "100%",
-    height: "100%"
-}
+class LandingPage extends Component {
 
-const buttonStyle = {
-    position: "absolute",
-    left: "40%",
-    top: "43%",
-    width: "200px",
-    height: "70px"
-}
+    static propTypes = {
+        history: PropTypes.object
+    }
 
-const LandingPage = () => {
-    return (
-        <div>
-        <img src={Background} style={ backgroundStyle } alt="BackgroundImage"/>
-       
-        <button className="btn waves-effect waves-light" type="submit" name="action" style={ buttonStyle }>Submit</button>
-        
-        
-        </div>
-    )
+    myInput = React.createRef();
+
+    goToChildSection = (event) => {
+        event.preventDefault();
+        const code = this.myInput.current.value;
+        this.props.history.push(`/story/${code}`);
+    }
+
+    goToParentSection = (event) => {
+        event.preventDefault();
+        const code = this.myInput.current.value;
+        this.props.history.push(`/story/${code}`);
+    }
+
+
+    render() {
+        return (
+            <div className="div-landingPage">
+                <form className="landingPageForm">
+                    <h2>Enter a Code</h2>
+                    <input 
+                        type="text" 
+                        ref={this.myInput}
+                        required 
+                        placeholder="Input Code Here" 
+                    />
+                    <div className="landingButtons">
+                        <button type="submit" onClick={this.goToChildSection}>Child Section</button>
+                        <button type="submit" onClick={this.goToParentSection}>Parent Section</button>
+                    </div>
+                </form>
+            </div>
+        )
+    }
 }
 
 export default LandingPage;

@@ -6,9 +6,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
-          <Route path="/" component={LandingPage} />
-        </BrowserRouter>
+        <p>App page</p>
       </div>
     );
   }
