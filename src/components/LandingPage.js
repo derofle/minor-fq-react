@@ -18,7 +18,7 @@ class LandingPage extends Component {
     goToParentSection = (event) => {
         event.preventDefault();
         const code = this.myInput.current.value;
-        this.props.history.push(`/story/${code}`);
+        this.props.history.push(`/missioncontrol/${code}`);
     }
 
 
