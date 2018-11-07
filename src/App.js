@@ -1,19 +1,15 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import initialStory from './story';
-import DialogueBox from './components/DialogueBox';
+import DialogueScreen from './components/DialogueScreen';
 import Settings from './components/Settings';
 import base from './base';
-
-import cogIcon from './images/icons/settings.png';
-
 
 class App extends Component {
 
   state = {
     story: [],
     storyProgress: 1,
-    cogPressed: false
   }
 
   static propTypes = {
@@ -21,6 +17,7 @@ class App extends Component {
   };
 
   componentDidMount() {
+
     this.ref = base.syncState(`${this.props.match.params.storyID}/story`, {
       context: this,
       state: 'story',
@@ -39,11 +36,21 @@ class App extends Component {
         }
       }
     })
+
+    document.onkeydown = (e) => {
+      switch (e.keyCode) {
+      case 37:
+        this.prevDialogue();
+        break;
+      case 39:
+        this.nextDialogue();
+        break;
+      default:
+        //do nothing
+      }
+    };
   }
 
-  componentWillUnmount() {
-    base.removeBinding(this.ref);
-  }
 
   firstRun = () => {
     this.setState({
@@ -52,37 +59,37 @@ class App extends Component {
     }) 
   }
 
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
+  }
+
   nextDialogue = () => {
-    this.setState({
-      storyProgress: this.state.storyProgress + 1
-    })
-  }
-
-  openSettings = () => {
+    if (this.state.storyProgress < this.state.story.length -1) {
       this.setState({
-        cogPressed: true
+        storyProgress: this.state.storyProgress + 1
       })
+    }
   }
 
-  closeSettings = () => {
-    this.setState({
-      cogPressed: false
-    })
+  prevDialogue = () => {
+    if (this.state.storyProgress > 1) {
+      this.setState({
+        storyProgress: this.state.storyProgress - 1
+      })
+    }
   }
 
   render() {
     if (!this.state.story[this.state.storyProgress]) return (
-      <div className="dialogue-window"></div>
+      <Fragment>
+        <Settings />
+        <div className="dialogue-window"></div>
+      </Fragment>
     );
     return (
       <Fragment>
-        <img src={cogIcon} className="settings-icon" alt="settings-icon" onClick={this.openSettings}/>
-        
-        <div className="dialogue-window">
-          <DialogueBox details={this.state.story[this.state.storyProgress]} nextDialogue={this.nextDialogue}/>
-          <Settings cogPressed={this.state.cogPressed} closeSettings={this.closeSettings}/>
-        </div>
-        
+        <Settings />
+        <DialogueScreen details={this.state.story[this.state.storyProgress]} nextDialogue={this.nextDialogue}/> 
       </Fragment>
     );
   }
