@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import "../css/landingpage.css";
 
 class LandingPage extends Component {
 
@@ -24,8 +25,8 @@ class LandingPage extends Component {
 
     render() {
         return (
-            <div className="div-landingPage">
-                <form className="landingPageForm">
+            <div className="LandingPage">
+                <form>
                     <h2>Enter a Code</h2>
                     <input 
                         type="text" 
@@ -33,7 +34,7 @@ class LandingPage extends Component {
                         required 
                         placeholder="Input Code Here" 
                     />
-                    <div className="landingButtons">
+                    <div className="LandingButtons">
                         <button type="submit" onClick={this.goToChildSection}>Child Section</button>
                         <button type="submit" onClick={this.goToParentSection}>Parent Section</button>
                     </div>

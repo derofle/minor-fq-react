@@ -1,0 +1,45 @@
+.missionname {
+    top: 5%;
+    left: 40%;
+    position: absolute;
+    background-color: rgba(206, 215, 255, 1);
+    width: 200px;
+    height: 50px;
+    border: 3px solid black;
+    z-index: 100;
+  }
+  
+  .missionname p {
+    margin: 0;
+    padding: 0px 0;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .mission-box {
+    width: 60%;
+    height: 80%;
+    border: 3px solid black;
+    background-color: rgba(255, 255, 255, .8);
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+  }
+  
+  .mission-box p {
+    padding: 0 20px;
+    font-size: 20px;
+  }
+
+  .mission-window {
+    width: 100%;
+    height: 768px;
+  }
+  
+  .mission-window .sprite {
+    height: 500px;
+    bottom: 7%;
+    left: 7%;
+    position: absolute;
+  }
+  

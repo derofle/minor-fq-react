@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import initialStory from './story';
 import DialogueScreen from './components/DialogueScreen';
+import MissionControl from './components/MissionControl';
 import Settings from './components/Settings';
 import base from './base';
 
@@ -9,7 +10,7 @@ class App extends Component {
 
   state = {
     story: [],
-    storyProgress: 1,
+    storyProgress: 0,
   }
 
   static propTypes = {
@@ -49,13 +50,15 @@ class App extends Component {
         //do nothing
       }
     };
+
+    console.log(this.props.location.pathname);
   }
 
 
   firstRun = () => {
     this.setState({
       story: initialStory,
-      storyProgress: this.state.storyProgress
+      storyProgress: 0
     }) 
   }
 
@@ -72,7 +75,7 @@ class App extends Component {
   }
 
   prevDialogue = () => {
-    if (this.state.storyProgress > 1) {
+    if (this.state.storyProgress > 0) {
       this.setState({
         storyProgress: this.state.storyProgress - 1
       })
@@ -80,18 +83,30 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.story[this.state.storyProgress]) return (
+    if (!this.state.story[this.state.storyProgress] && this.state.storyProgress !== 1) return (
       <Fragment>
         <Settings />
         <div className="dialogue-window"></div>
       </Fragment>
     );
-    return (
-      <Fragment>
-        <Settings />
-        <DialogueScreen details={this.state.story[this.state.storyProgress]} nextDialogue={this.nextDialogue}/> 
-      </Fragment>
-    );
+
+      if (this.props.location.pathname.includes('story')) {
+        return (
+          <Fragment>
+            <Settings />
+            <DialogueScreen details={this.state.story[this.state.storyProgress]} nextDialogue={this.nextDialogue}/> 
+          </Fragment>
+        );
+      }
+
+    if (this.props.location.pathname.includes('missioncontrol')) {
+      return(
+        <Fragment>
+          <Settings />
+          <MissionControl  storyProgress={this.state.storyProgress} story={this.state.story}/>
+        </Fragment>
+      )
+    }
   }
 
 }
