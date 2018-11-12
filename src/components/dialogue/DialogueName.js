@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const NameBox = (props) => (
-    <div className="speech-box">
-        <p>{props.character}</p>
-    </div>  
+	<div className="speech-box">
+		<p>{props.character}</p>
+	</div>
 );
 
 export default NameBox;

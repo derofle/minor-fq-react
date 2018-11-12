@@ -5,14 +5,14 @@ import App from "../App";
 import NotFound from "./NotFound";
 
 const Router = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={LandingPage} />
-      <Route path="/story/:storyID" component={App} />
-      <Route path="/missioncontrol/:storyID" component={App} />
-      <Route component={NotFound} />
-    </Switch>
-  </BrowserRouter>
+	<BrowserRouter>
+		<Switch>
+			<Route exact path="/" component={LandingPage} />
+			<Route path="/story/:storyID" component={App} />
+			<Route path="/missioncontrol/:storyID" component={App} />
+			<Route component={NotFound} />
+		</Switch>
+	</BrowserRouter>
 );
 
 export default Router;
