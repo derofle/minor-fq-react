@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import initialStory from "./story";
+import initialMissions from "./missions";
 import DialogueScreen from "./components/DialogueScreen";
 import MissionControl from "./components/MissionControl";
 import Settings from "./components/Settings";
@@ -8,7 +9,8 @@ import base from "./base";
 
 class App extends Component {
   state = {
-  	story: [],
+	  story: [],
+	  missions: [],
   	storyProgress: 0,
   }
 
@@ -20,6 +22,10 @@ class App extends Component {
   	this.ref = base.syncState(`${this.props.match.params.storyID}/story`, {
   		context: this,
   		state: "story",
+	  });
+	  this.ref = base.syncState(`${this.props.match.params.storyID}/missions`, {
+  		context: this,
+  		state: "missions",
   	});
   	this.ref = base.syncState(`${this.props.match.params.storyID}/storyProgress`, {
   		context: this,
@@ -55,7 +61,8 @@ class App extends Component {
 
   firstRun = () => {
   	this.setState({
-  		story: initialStory,
+		  story: initialStory,
+		  missions: initialMissions,
   		storyProgress: 0,
   	});
   }
@@ -102,8 +109,13 @@ class App extends Component {
   	if (this.props.location.pathname.includes("missioncontrol")) {
   		return (
   			<Fragment>
-  				<Settings />
-  				<MissionControl storyProgress={this.state.storyProgress} story={this.state.story}/>
+  				<MissionControl
+				  storyProgress={this.state.storyProgress}
+				  story={this.state.story}
+				  missions={this.state.missions}
+				  nextDialogue={this.nextDialogue}
+				  prevDialogue={this.prevDialogue}
+				  />
   			</Fragment>
   		);
   	}

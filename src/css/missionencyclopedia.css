@@ -1,0 +1,38 @@
+.encyclopedia-icon {
+    width: 20%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+
+.encyclopedia-box {
+    position: absolute;
+    margin: 0 auto;
+    top: 100%;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: rgba(190, 190, 190, 1);
+    border: 3px solid white;
+    z-index: 10;
+  }
+  
+  .settings-box p {
+    font-size: 28px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .missions {
+      margin: 0 auto;
+  }
+
+  .mission-name {
+      font-size: 22px;
+      color: white;
+  }
+
+  .mission-list p {
+    color: white;
+  }
