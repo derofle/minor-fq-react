@@ -1,0 +1,24 @@
+
+.missioncontrol {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 568px;
+}
+
+.missionWindow {
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    top: 12%;
+}
+
+.MissionNav {
+    position: fixed;
+    top: 0%;
+    margin: 0 auto;
+    height: 12%;
+    width: 100%;
+    background-color: grey;
+    z-index: 100;
+}

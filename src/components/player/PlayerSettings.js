@@ -1,41 +1,40 @@
 import React, { Component, Fragment } from "react";
-import cogIcon from "../images/icons/settings.png";
-import "../css/settings.css";
-
+import cogIcon from "../../images/icons/settings.png";
+import "../../css/playersettings.css";
 
 class Settings extends Component {
     state = {
-    	cogPressed: false,
+    	isActive: false,
     }
 
     openSettings = () => {
     	this.setState({
-    		cogPressed: true,
+    		isActive: true,
     	});
     }
 
     closeSettings = () => {
     	this.setState({
-    		cogPressed: false,
+    		isActive: false,
     	});
     }
 
     render() {
-    	if (this.state.cogPressed) {
+    	if (this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="settings-icon" alt="settings-icon" onClick={this.openSettings}/>
-    				<div className="settings-box">
+    				<img src={cogIcon} className="SettingsIcon" alt="Settings Icon" onClick={this.closeSettings}/>
+    				<div className="Settings">
     					<p>Settings here please.</p>
     					<button onClick={this.closeSettings}>Close</button>
     				</div>
     			</Fragment>
     		);
     	}
-    	if (!this.state.cogPressed) {
+    	if (!this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="settings-icon" alt="settings-icon" onClick={this.openSettings}/>
+    				<img src={cogIcon} className="SettingsIcon" alt="Settings Icon" onClick={this.openSettings}/>
     			</Fragment>
     		);
     	}

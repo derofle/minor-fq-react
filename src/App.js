@@ -2,9 +2,10 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import initialStory from "./story";
 import initialMissions from "./missions";
-import DialogueScreen from "./components/DialogueScreen";
-import MissionControl from "./components/MissionControl";
-import Settings from "./components/Settings";
+
+import DialogueScreen from "./components/player/DialogueScreen";
+import MissionControl from "./components/parent/MissionControl";
+
 import base from "./base";
 
 class App extends Component {
@@ -91,7 +92,6 @@ class App extends Component {
   	if (!this.state.story[this.state.storyProgress] && this.state.storyProgress !== 1) {
   		return (
   			<Fragment>
-  				<Settings />
   				<div className="dialogue-window"></div>
   			</Fragment>
   		);
@@ -100,8 +100,10 @@ class App extends Component {
   	if (this.props.location.pathname.includes("story")) {
   		return (
   			<Fragment>
-  				<Settings />
-  				<DialogueScreen details={this.state.story[this.state.storyProgress]} nextDialogue={this.nextDialogue}/>
+  				<DialogueScreen
+				  details={this.state.story[this.state.storyProgress]}
+				  nextDialogue={this.nextDialogue}
+				  />
   			</Fragment>
   		);
   	}

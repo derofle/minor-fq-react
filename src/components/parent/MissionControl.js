@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from "react";
-import MissionEncyclopedia from "./MissionEncyclopedia";
-import "../css/missioncontrol.css";
+import MissionNav from "./MissionNav";
+import "../../css/parent/missioncontrol.css";
 
 class MissionControl extends Component {
 	render() {
 		return (
 			<Fragment>
+				<MissionNav
+					missions={this.props.missions}
+				/>
 				<div className="missioncontrol">
-					<div className="missioncontrol-nav">
-						<MissionEncyclopedia storyProgress={this.props.storyProgress} story={this.props.story} missions={this.props.missions}/>
-					</div>
 					<div className="missionWindow">
 						<p>Your kid is at slide {this.props.storyProgress + 1} of {this.props.story.length} slides</p>
 						<button onClick={this.props.prevDialogue}>Prev</button>

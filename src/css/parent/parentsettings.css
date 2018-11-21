@@ -1,0 +1,32 @@
+.MissionNav .SettingsIcon {
+    position: absolute;
+    margin: 5px auto !important;
+    opacity: 0.7;
+    width: 15%;
+    margin: 20px;
+    right: 2%;
+}
+
+.MissionNav .Settings {
+    position: absolute;
+    margin: 0 auto;
+    top: 100%;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: rgba(190, 190, 190, 1);
+    border: 3px solid white;
+    z-index: 10;
+}
+
+.MissionNav .Settings p {
+    font-size: 28px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.MissionNav .Settings button {
+    display: none;
+    visibility: hidden;
+}

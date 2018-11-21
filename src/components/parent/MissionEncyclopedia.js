@@ -1,27 +1,31 @@
 import React, { Component, Fragment } from "react";
-import Mission from "./Mission";
-import encyclIcon from "../images/icons/encyclopedia.png";
-import "../css/missionencyclopedia.css";
+import Mission from "../Mission";
+import encyclIcon from "../../images/icons/encyclopedia.png";
+import "../../css/parent/missionencyclopedia.css";
 
 class MissionEncyclopedia extends Component {
 	state = {
-    	encyclPressed: false,
+    	isActive: false,
 	}
 
     openComponent = () => {
-    	this.setState({
-    		encyclPressed: true,
-    	});
+    	if (!this.props.componentActive) {
+    		this.setState({
+    			isActive: true,
+    		});
+    		this.props.setComponentActive();
+    	}
     }
 
     closeComponent = () => {
     	this.setState({
-    		encyclPressed: false,
+    		isActive: false,
     	});
+    	this.props.setComponentNonActive();
     }
 
     render() {
-    	if (this.state.encyclPressed) {
+    	if (this.state.isActive) {
     		return (
     			<Fragment>
     				<img src={encyclIcon} className="encyclopedia-icon" alt="encyclopedia-icon" onClick={this.closeComponent}/>
@@ -39,7 +43,7 @@ class MissionEncyclopedia extends Component {
     			</Fragment>
     		);
     	}
-    	if (!this.state.encyclPressed) {
+    	if (!this.state.isActive) {
     		return (
     			<Fragment>
     				<img src={encyclIcon} className="encyclopedia-icon" alt="encyclopedia-icon" onClick={this.openComponent}/>
