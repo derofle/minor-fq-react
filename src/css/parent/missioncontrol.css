@@ -13,12 +13,3 @@
     top: 12%;
 }
 
-.MissionNav {
-    position: fixed;
-    top: 0%;
-    margin: 0 auto;
-    height: 12%;
-    width: 100%;
-    background-color: grey;
-    z-index: 100;
-}

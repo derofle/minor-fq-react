@@ -9,8 +9,8 @@ import MissionName from "./MissionName";
 import Background from "./Background";
 import PlayerSettings from "./PlayerSettings";
 
-import "../../css/dialogue.css";
-import "../../css/mission.css";
+import "../../css/player/dialogue.css";
+import "../../css/player/mission.css";
 
 class DialogueScreen extends Component {
     static propTypes = {

@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
-import MissionSettings from "./MissionSettings";
+import ParentSettings from "./ParentSettings";
 import MissionEncyclopedia from "./MissionEncyclopedia";
 import MissionFAQ from "./MissionFAQ";
-import "../../css/missioncontrol.css";
+import "../../css/parent/missionnav.css";
 
 class MissionNav extends Component {
 	state = {
@@ -31,7 +31,7 @@ class MissionNav extends Component {
 						setComponentActive={this.setComponentActive}
 						setComponentNonActive={this.setComponentNonActive}
 					/>
-					<MissionSettings
+					<ParentSettings
 						componentActive={this.state.componentActive}
 						setComponentActive={this.setComponentActive}
 						setComponentNonActive={this.setComponentNonActive}
@@ -41,6 +41,7 @@ class MissionNav extends Component {
 						setComponentActive={this.setComponentActive}
 						setComponentNonActive={this.setComponentNonActive}
 					/>
+
 				</div>
 			</Fragment>
 		);

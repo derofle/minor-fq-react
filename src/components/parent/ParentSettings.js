@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import cogIcon from "../../images/icons/settings.png";
 import "../../css/parent/parentsettings.css";
 
-class MissionSettings extends Component {
+class ParentSettings extends Component {
     state = {
     	isActive: false,
     }
@@ -27,8 +27,8 @@ class MissionSettings extends Component {
     	if (this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="SettingsIcon" alt="Settings Icon" onClick={this.closeComponent}/>
-    				<div className="Settings">
+    				<img src={cogIcon} className="ParentSettingsIcon" alt="Settings Icon" onClick={this.closeComponent}/>
+    				<div className="ParentSettings">
     					<p>Settings here please.</p>
     				</div>
     			</Fragment>
@@ -37,11 +37,11 @@ class MissionSettings extends Component {
     	if (!this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="SettingsIcon" alt="Settings Icon" onClick={this.openComponent}/>
+    				<img src={cogIcon} className="ParentSettingsIcon" alt="Settings Icon" onClick={this.openComponent}/>
     			</Fragment>
     		);
     	}
     }
 }
 
-export default MissionSettings;
+export default ParentSettings;

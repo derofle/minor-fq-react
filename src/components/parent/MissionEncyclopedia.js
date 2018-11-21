@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Mission from "../Mission";
+import Mission from "./Mission";
 import encyclIcon from "../../images/icons/encyclopedia.png";
 import "../../css/parent/missionencyclopedia.css";
 
@@ -28,7 +28,7 @@ class MissionEncyclopedia extends Component {
     	if (this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={encyclIcon} className="encyclopedia-icon" alt="encyclopedia-icon" onClick={this.closeComponent}/>
+    				<img src={encyclIcon} className="MissionEncyclopediaIcon" alt="encyclopedia-icon" onClick={this.closeComponent}/>
     				<div className="encyclopedia-box">
     					<ul className="missions">
     						{Object.keys(this.props.missions).map(key => (
@@ -46,7 +46,7 @@ class MissionEncyclopedia extends Component {
     	if (!this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={encyclIcon} className="encyclopedia-icon" alt="encyclopedia-icon" onClick={this.openComponent}/>
+    				<img src={encyclIcon} className="MissionEncyclopediaIcon" alt="encyclopedia-icon" onClick={this.openComponent}/>
     			</Fragment>
     		);
     	}

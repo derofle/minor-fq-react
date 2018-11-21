@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import cogIcon from "../../images/icons/settings.png";
-import "../../css/playersettings.css";
+import "../../css/player/playersettings.css";
 
 class Settings extends Component {
     state = {
