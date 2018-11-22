@@ -12,7 +12,8 @@ class App extends Component {
   state = {
 	  story: [],
 	  missions: [],
-  	storyProgress: 0,
+	  storyProgress: 0,
+	  loading: true,
   }
 
   static propTypes = {
@@ -54,7 +55,7 @@ class App extends Component {
   		default:
         // do nothing
   		}
-  	};
+	  };
 
   	console.log(this.props.location.pathname);
   }
@@ -64,7 +65,8 @@ class App extends Component {
   	this.setState({
 		  story: initialStory,
 		  missions: initialMissions,
-  		storyProgress: 0,
+		  storyProgress: 0,
+		  loading: false,
   	});
   }
 
@@ -89,15 +91,13 @@ class App extends Component {
   }
 
   render() {
-  	if (!this.state.story[this.state.storyProgress] && this.state.storyProgress !== 1) {
-  		return (
-  			<Fragment>
-  				<div className="dialogue-window"></div>
-  			</Fragment>
-  		);
-  	}
+	if (this.state.loading) {
+		return (
+			<div className="loading">Loading...</div>
+		);
+	}
 
-  	if (this.props.location.pathname.includes("story")) {
+	if (this.props.location.pathname.includes("story")) {
   		return (
   			<Fragment>
   				<DialogueScreen
@@ -106,9 +106,9 @@ class App extends Component {
 				  />
   			</Fragment>
   		);
-  	}
+	}
 
-  	if (this.props.location.pathname.includes("missioncontrol")) {
+	if (this.props.location.pathname.includes("missioncontrol")) {
   		return (
   			<Fragment>
   				<MissionControl

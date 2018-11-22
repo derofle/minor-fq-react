@@ -27,7 +27,7 @@ class ParentSettings extends Component {
     	if (this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="ParentSettingsIcon" alt="Settings Icon" onClick={this.closeComponent}/>
+    				<img src={cogIcon} className="mission-icon" alt="Settings Icon" onClick={this.closeComponent}/>
     				<div className="ParentSettings">
     					<p>Settings here please.</p>
     				</div>
@@ -37,7 +37,7 @@ class ParentSettings extends Component {
     	if (!this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="ParentSettingsIcon" alt="Settings Icon" onClick={this.openComponent}/>
+    				<img src={cogIcon} className="mission-icon" alt="Settings Icon" onClick={this.openComponent}/>
     			</Fragment>
     		);
     	}

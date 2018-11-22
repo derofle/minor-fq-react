@@ -5,6 +5,7 @@
   "dependencies": {
     "aframe": "^0.8.2",
     "firebase": "^4.10.1",
+    "node-sass": "^4.10.0",
     "prop-types": "^15.6.0",
     "re-base": "3.2.2",
     "react": "^16.5.2",
@@ -19,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "https": "HTTPS=true npm start"
   },
   "eslintConfig": {
     "extends": "react-app"

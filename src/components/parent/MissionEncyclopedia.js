@@ -28,7 +28,7 @@ class MissionEncyclopedia extends Component {
     	if (this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={encyclIcon} className="MissionEncyclopediaIcon" alt="encyclopedia-icon" onClick={this.closeComponent}/>
+    				<img src={encyclIcon} className="mission-icon" alt="encyclopedia-icon" onClick={this.closeComponent}/>
     				<div className="encyclopedia-box">
     					<ul className="missions">
     						{Object.keys(this.props.missions).map(key => (
@@ -46,7 +46,7 @@ class MissionEncyclopedia extends Component {
     	if (!this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={encyclIcon} className="MissionEncyclopediaIcon" alt="encyclopedia-icon" onClick={this.openComponent}/>
+    				<img src={encyclIcon} className="mission-icon" alt="encyclopedia-icon" onClick={this.openComponent}/>
     			</Fragment>
     		);
     	}

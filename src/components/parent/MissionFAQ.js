@@ -21,13 +21,13 @@ class MissionFAQ extends Component {
     		isActive: false,
     	});
     	this.props.setComponentNonActive();
-    }
+	}
 
     render() {
     	if (this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={FAQIcon} className="FAQIcon" alt="FAQ Icon" onClick={this.closeComponent}/>
+    				<img src={FAQIcon} className="mission-icon" alt="FAQ Icon" onClick={this.closeComponent}/>
     				<div className="MissionFAQ">
     					<p>FAQ here please.</p>
     				</div>
@@ -37,7 +37,7 @@ class MissionFAQ extends Component {
     	if (!this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={FAQIcon} className="FAQIcon" alt="FAQ Icon" onClick={this.openComponent}/>
+    				<img src={FAQIcon} className="mission-icon" alt="FAQ Icon" onClick={this.openComponent}/>
     			</Fragment>
     		);
     	}

@@ -13,7 +13,7 @@ module.exports = {
         }
     },
     "rules" : {
-        "indent": [2, "tab"],
+        "indent": [0, "tab"],
         "no-console": 0,
         "max-len": 0,
         "arrow-parens": 0,
