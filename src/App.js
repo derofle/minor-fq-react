@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import initialStory from "./story";
 import initialMissions from "./missions";
 
+import Loading from "./components/controllers/Loading";
 import DialogueScreen from "./components/player/DialogueScreen";
 import MissionControl from "./components/parent/MissionControl";
 
@@ -13,6 +14,7 @@ class App extends Component {
 	  story: [],
 	  missions: [],
 	  storyProgress: 0,
+	  paused: false,
 	  loading: true,
   }
 
@@ -40,7 +42,11 @@ class App extends Component {
   		then(data) {
   			if (data.length === 0) {
   				this.firstRun();
-  			}
+  			} else {
+				this.setState({
+					loading: false,
+				});
+			  }
   		},
   	});
 
@@ -75,28 +81,43 @@ class App extends Component {
   }
 
   nextDialogue = () => {
-  	if (this.state.storyProgress < this.state.story.length - 1) {
-  		this.setState({
-  			storyProgress: this.state.storyProgress + 1,
-  		});
-  	}
+	if (!this.state.paused) {
+		if (this.state.storyProgress < this.state.story.length - 1) {
+			this.setState({
+				storyProgress: this.state.storyProgress + 1,
+			});
+		}
+	}
   }
 
   prevDialogue = () => {
-  	if (this.state.storyProgress > 0) {
-  		this.setState({
-  			storyProgress: this.state.storyProgress - 1,
-  		});
-  	}
+	if (!this.state.paused) {
+		if (this.state.storyProgress > 0) {
+			this.setState({
+				storyProgress: this.state.storyProgress - 1,
+			});
+		}
+	}
+  }
+
+  pauseDialogue = () => {
+	  if (!this.state.paused) {
+		this.setState({
+			paused: true,
+		});
+	  } else {
+		this.setState({
+			paused: false,
+		});
+	  }
   }
 
   render() {
 	if (this.state.loading) {
 		return (
-			<div className="loading">Loading...</div>
+			<Loading />
 		);
 	}
-
 	if (this.props.location.pathname.includes("story")) {
   		return (
   			<Fragment>
@@ -107,7 +128,6 @@ class App extends Component {
   			</Fragment>
   		);
 	}
-
 	if (this.props.location.pathname.includes("missioncontrol")) {
   		return (
   			<Fragment>
@@ -117,10 +137,12 @@ class App extends Component {
 				  missions={this.state.missions}
 				  nextDialogue={this.nextDialogue}
 				  prevDialogue={this.prevDialogue}
+				  pauseDialogue={this.pauseDialogue}
+				  paused={this.state.paused}
 				  />
   			</Fragment>
   		);
-  	}
+	  }
   }
 }
 

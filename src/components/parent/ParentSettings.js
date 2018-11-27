@@ -1,46 +1,15 @@
 import React, { Component, Fragment } from "react";
-import cogIcon from "../../images/icons/settings.png";
 import "../../css/parent/parentsettings.css";
 
 class ParentSettings extends Component {
-    state = {
-    	isActive: false,
-    }
-
-    openComponent = () => {
-    	if (!this.props.componentActive) {
-    		this.setState({
-    			isActive: true,
-    		});
-    		this.props.setComponentActive();
-    	}
-    }
-
-    closeComponent = () => {
-    	this.setState({
-    		isActive: false,
-    	});
-    	this.props.setComponentNonActive();
-    }
-
     render() {
-    	if (this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="mission-icon" alt="Settings Icon" onClick={this.closeComponent}/>
     				<div className="ParentSettings">
     					<p>Settings here please.</p>
     				</div>
     			</Fragment>
     		);
-    	}
-    	if (!this.state.isActive) {
-    		return (
-    			<Fragment>
-    				<img src={cogIcon} className="mission-icon" alt="Settings Icon" onClick={this.openComponent}/>
-    			</Fragment>
-    		);
-    	}
     }
 }
 

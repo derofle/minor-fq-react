@@ -8,6 +8,7 @@ import Tando from "../../images/sprites/tando.png";
 import Morkaas from "../../images/sprites/morkaas.png";
 import Mirabeli from "../../images/sprites/mirabeli.png";
 import Aeros from "../../images/sprites/aeros.png";
+import Hakaan from "../../images/sprites/hakaan.png";
 
 class Sprite extends Component {
     count = 0;
@@ -72,6 +73,13 @@ class Sprite extends Component {
     			imgUrl: <img src={Aeros} alt={Aeros} className="sprite"/>,
     		});
     		this.count = 8;
+		}
+
+		if (this.props.character === "Hakaan" && this.count !== 9) {
+    		this.setState({
+    			imgUrl: <img src={Hakaan} alt={Hakaan} className="sprite"/>,
+    		});
+    		this.count = 9;
     	}
     }
 

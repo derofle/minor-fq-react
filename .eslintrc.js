@@ -2,7 +2,8 @@ module.exports = {
     "extends": "airbnb-base",
     "globals": {
         "window": true,
-        "document": true
+        "document": true,
+        "alert": true
       },
     "parser": "babel-eslint",
     "parserOptions": {
@@ -27,6 +28,7 @@ module.exports = {
         "no-unused-vars": 0,
         "no-mixed-spaces-and-tabs": 0,
         "object-curly-newline": 0,
-        "consistent-return": 0
+        "consistent-return": 0,
+        "class-methods-use-this": 0
     }
 };

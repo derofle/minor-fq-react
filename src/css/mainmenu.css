@@ -1,0 +1,40 @@
+.MainMenu {
+    background-color: rgba(2, 3, 42, 1); 
+    width: 100%;
+    height: 100vh;
+}
+
+.menu-header {
+    position: relative;
+    top: 15vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.menu-header h1 {
+    color: white;
+    font-size: 8vw;
+    margin: 0 auto;
+}
+
+.menu-header h3 {
+    color: white;
+    font-size: 5vw;
+    margin: 0 auto;
+}
+
+.select-buttons {
+    position: relative;
+    top: 25vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.select-buttons img {
+    width: 45vh;
+    margin: 0 auto;
+    
+}

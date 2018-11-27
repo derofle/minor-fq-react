@@ -1,0 +1,27 @@
+.Loading {
+    background-color: rgba(2, 3, 42, 1);
+    height: 100vh;
+    overflow-y: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.ring-loader {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    margin-left: -15vh;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.familyquest-logo {
+    position: absolute;
+    width: 40vh;
+    left: 50%;
+    margin-left: -20vh;
+    bottom: 40%;
+}
