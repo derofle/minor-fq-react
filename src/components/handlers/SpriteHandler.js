@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
 
 import Joksin from "../../images/sprites/joksin.png";
 import Professor from "../../images/sprites/professor.png";
@@ -11,6 +12,11 @@ import Aeros from "../../images/sprites/aeros.png";
 import Hakaan from "../../images/sprites/hakaan.png";
 
 class SpriteHandler extends Component {
+	static propTypes = {
+		history: PropTypes.object,
+		character: PropTypes.string,
+	}
+
     count = 0;
 
     state = {

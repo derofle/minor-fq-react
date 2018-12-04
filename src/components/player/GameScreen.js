@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import DialogueBox from "./dialogue/DialogueBox";
 import MissionBox from "./mission/MissionBox";
 import SpriteHandler from "../handlers/SpriteHandler";
-import DialogueName from "./dialogue/DialogueName";
+import NameBox from "./dialogue/NameBox";
 import MissionName from "./mission/MissionName";
 import BackgroundHandler from "../handlers/BackgroundHandler";
 import Settings from "../Settings";
@@ -29,7 +29,7 @@ class GameScreen extends Component {
     				<div className="dialogue-window">
     					<SpriteHandler character={character} />
     					<BackgroundHandler location={location} />
-    					<DialogueName character={character} />
+    					<NameBox name={character} />
     					<DialogueBox dialogue={dialogue} nextDialogue={this.props.nextDialogue}/>
     				</div>
     			</Fragment>

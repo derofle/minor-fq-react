@@ -6,14 +6,9 @@
 @import "partials/colors";
 
 // Modules
+@import "modules/player/gamescreen";
+@import "modules/parent/missioncontrol";
 @import "modules/inputcode";
 @import "modules/loading";
-@import "modules/dialogue";
 @import "modules/mainmenu";
 @import "modules/settings";
-@import "modules/mission";
-@import "modules/missioncontrol";
-@import "modules/missionencyclopedia";
-@import "modules/missionfaq";
-@import "modules/missionnav";
-@import "modules/parentsettings";

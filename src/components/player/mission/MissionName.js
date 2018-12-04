@@ -1,7 +1,7 @@
 import React from "react";
 
 const MissionName = (props) => (
-	<div className="missionname">
+	<div className="MissionName">
 		<p>{props.character}</p>
 	</div>
 );

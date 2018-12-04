@@ -1,0 +1,40 @@
+@import "dialogue/namebox";
+@import "dialogue/dialoguebox";
+@import "mission/missionbox";
+@import "mission/missionname";
+
+.dialogue-window {
+    width: 100%;
+    height: 100vh;
+.sprite {
+    height: 500px;
+    bottom: 7%;
+    right: 13%;
+    position: absolute;
+  }
+}
+
+.mission-window {
+    width: 100%;
+    height: 100vh;
+.sprite {
+    height: 500px;
+    bottom: 7%;
+    left: 7%;
+    position: absolute;
+  }
+}
+
+.next-button {
+    color: $heading-font-color;
+    background-color: $offwhite;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 4vw;
+    font-family: "camelone";
+    bottom: 7%;
+    position: absolute;
+    right: 10%;
+    border-radius: 10px;
+}

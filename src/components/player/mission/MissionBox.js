@@ -1,7 +1,7 @@
 import React from "react";
 
 const MissionBox = (props) => (
-	<div className="mission-box">
+	<div className="MissionBox">
 		<p>{props.dialogue}</p>
 	</div>
 );

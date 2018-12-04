@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
 
 import Etheria from "../../images/backgrounds/etheria.png";
 import Spacewindow from "../../images/backgrounds/spacewindow.png";
@@ -11,6 +12,11 @@ import Vulcanus from "../../images/backgrounds/vulcanus.png";
 import ApproachSenate from "../../images/backgrounds/approach-senate.png";
 
 class BackgroundHandler extends Component {
+	static propTypes = {
+		history: PropTypes.object,
+		character: PropTypes.string,
+	}
+
     count = 0;
 
     state = {

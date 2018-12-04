@@ -26,7 +26,7 @@ class App extends Component {
   	this.ref = base.syncState(`${this.props.match.params.storyID}/story`, {
   		context: this,
   		state: "story",
-	  });
+	});
 	  this.ref = base.syncState(`${this.props.match.params.storyID}/missions`, {
   		context: this,
   		state: "missions",
