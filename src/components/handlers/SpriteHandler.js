@@ -10,7 +10,7 @@ import Mirabeli from "../../images/sprites/mirabeli.png";
 import Aeros from "../../images/sprites/aeros.png";
 import Hakaan from "../../images/sprites/hakaan.png";
 
-class Sprite extends Component {
+class SpriteHandler extends Component {
     count = 0;
 
     state = {
@@ -91,4 +91,4 @@ class Sprite extends Component {
     	);
     }
 }
-export default Sprite;
+export default SpriteHandler;

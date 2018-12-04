@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import "../css/inputcode.css";
+import Settings from "./Settings";
 
 class InputCode extends Component {
 	state = {
@@ -59,6 +59,7 @@ class InputCode extends Component {
     render() {
     	return (
     		<div className="InputCode">
+				<div className="settings-upperleft"><Settings /></div>
     			<form>
 					<div className="inputcode-header">
     				<h2>Enter Code</h2>

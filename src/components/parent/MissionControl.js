@@ -1,13 +1,25 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+
 import MissionNav from "./MissionNav";
 
 import BackwardsIcon from "../../images/icons/backward.png";
 import PauseIcon from "../../images/icons/pause.png";
 import ResumeIcon from "../../images/icons/play.png";
 import ForwardIcon from "../../images/icons/forward.png";
-import "../../css/parent/missioncontrol.css";
 
 class MissionControl extends Component {
+	static propTypes = {
+		history: PropTypes.object,
+		story: PropTypes.array,
+		missions: PropTypes.array,
+		nextDialogue: PropTypes.func,
+		pauseDialogue: PropTypes.func,
+		prevDialogue: PropTypes.func,
+		paused: PropTypes.bool,
+		storyProgress: PropTypes.number,
+	}
+
 	state = {
 		changeIcon: PauseIcon,
 	}

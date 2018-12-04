@@ -1,5 +1,5 @@
 .MainMenu {
-    background-color: rgba(2, 3, 42, 1); 
+    background-color: $background-color;
     width: 100%;
     height: 100vh;
 }
@@ -14,15 +14,17 @@
 }
 
 .menu-header h1 {
-    color: white;
+    color: $offwhite;
     font-size: 8vw;
     margin: 0 auto;
+    font-family: $heading-font-family;
 }
 
 .menu-header h3 {
-    color: white;
+    color: $offwhite;
     font-size: 5vw;
     margin: 0 auto;
+    font-family: $heading-font-family;
 }
 
 .select-buttons {

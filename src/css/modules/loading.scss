@@ -1,9 +1,16 @@
 .Loading {
-    background-color: rgba(2, 3, 42, 1);
+    background-color: $background-color;
     height: 100vh;
     overflow-y: auto;
     overflow: hidden;
     box-sizing: border-box;
+}
+
+.Loading p {
+    font-family: $heading-font-family;
+    font-size: 4vh;
+    text-align: center;
+    color: $offwhite;
 }
 
 
@@ -12,10 +19,6 @@
     bottom: 20%;
     left: 50%;
     margin-left: -15vh;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-
 }
 
 .familyquest-logo {

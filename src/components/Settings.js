@@ -1,8 +1,13 @@
 import React, { Component, Fragment } from "react";
-import cogIcon from "../../images/icons/settings.png";
-import "../../css/player/playersettings.css";
+import PropTypes from "prop-types";
+
+import cogIcon from "../images/icons/settings.png";
 
 class Settings extends Component {
+	static propTypes = {
+    	history: PropTypes.object,
+	}
+
     state = {
     	isActive: false,
     }
@@ -23,7 +28,7 @@ class Settings extends Component {
     	if (this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="SettingsIcon" alt="Settings Icon" onClick={this.closeSettings}/>
+    				<img src={cogIcon} className="settings-icon" alt="Settings Icon" onClick={this.closeSettings}/>
     				<div className="Settings">
     					<p>Settings here please.</p>
     					<button onClick={this.closeSettings}>Close</button>
@@ -34,7 +39,7 @@ class Settings extends Component {
     	if (!this.state.isActive) {
     		return (
     			<Fragment>
-    				<img src={cogIcon} className="SettingsIcon" alt="Settings Icon" onClick={this.openSettings}/>
+    				<img src={cogIcon} className="settings-icon" alt="Settings Icon" onClick={this.openSettings}/>
     			</Fragment>
     		);
     	}

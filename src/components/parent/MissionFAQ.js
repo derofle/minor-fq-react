@@ -1,7 +1,11 @@
 import React, { Component, Fragment } from "react";
-import "../../css/parent/missionfaq.css";
+import PropTypes from "prop-types";
 
 class MissionFAQ extends Component {
+	static propTypes = {
+		history: PropTypes.object,
+	}
+
     render() {
     		return (
     			<Fragment>

@@ -1,9 +1,14 @@
 import React, { Component, Fragment } from "react";
 import { BarLoader } from "react-spinners";
+import PropTypes from "prop-types";
+
 import FQLogo from "../../images/FQLogo.png";
-import "../../css/loading.css";
 
 class Loading extends Component {
+    static propTypes = {
+    	history: PropTypes.object,
+    }
+
     render() {
     	return (
             <Fragment>
@@ -15,7 +20,7 @@ class Loading extends Component {
                     width={30}
                     color={"#FFFFFF"}
                     />
-                    <p>Loading ...</p>
+                    <p>Loading...</p>
                 </div>
     		</div>
             </Fragment>

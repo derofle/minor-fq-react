@@ -1,20 +1,21 @@
-
 .speech-box {
-    bottom: 26%;
-    right: 20%;
+    bottom: 25%;
+    right: 15%;
     position: absolute;
-    background-color: rgba(206, 215, 255, 0.8);
+    background-color: $offwhite;
     width: 200px;
     height: 50px;
-    border: 3px solid black;
-    
+    border-radius: 10px;
+    z-index: 8;
   }
   
   .speech-box p {
     margin: 0;
     padding: 0px 0;
     text-align: center;
-    font-size: 25px;
+    font-size: 4vw;
+    font-family: "camelone";
+    color: $heading-font-color;
   }
   
   .speech-sprite {
@@ -28,8 +29,8 @@
 .dialogue-box {
     width: 80%;
     height: 125px;
-    border: 3px solid black;
-    background-color: rgba(255, 255, 255, .8);
+    border-radius: 10px;
+    background-color: $window-color;
     position: absolute;
     bottom: 10%;
     left: 10%;
@@ -38,6 +39,7 @@
   .dialogue-box p {
     padding: 0 20px;
     font-size: 20px;
+    color: $offwhite;
   }
   
   .dialogue-window {

@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+
 import ParentSettings from "./ParentSettings";
 import MissionEncyclopedia from "./MissionEncyclopedia";
 import MissionFAQ from "./MissionFAQ";
@@ -6,9 +8,13 @@ import MissionFAQ from "./MissionFAQ";
 import FAQIcon from "../../images/icons/question.png";
 import encyclIcon from "../../images/icons/encyclopedia.png";
 import cogIcon from "../../images/icons/settings.png";
-import "../../css/parent/missionnav.css";
 
 class MissionNav extends Component {
+	static propTypes = {
+		history: PropTypes.object,
+		missions: PropTypes.array,
+	}
+
 	state = {
 		activeComponent: null,
 		currentComponent: null,
@@ -65,7 +71,7 @@ class MissionNav extends Component {
 			<Fragment>
 				<div className="MissionNav">
 					<div className="filterbox"><p>Chapter 1/3: Part Name</p></div>
-				
+
 				<img src={FAQIcon} className="faq-icon" alt="FAQ Icon" onClick={this.loadSubComponent}/>
 				<img src={encyclIcon} className="encycl-icon" alt="encyclopedia-icon" onClick={this.loadSubComponent}/>
 				<img src={cogIcon} className="cog-icon" alt="Settings Icon" onClick={this.loadSubComponent}/>

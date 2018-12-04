@@ -1,7 +1,13 @@
 import React, { Component, Fragment } from "react";
-import Loading from "./controllers/Loading";
+import PropTypes from "prop-types";
+
+import Loading from "./handlers/Loading";
 
 class LandingPage extends Component {
+    static propTypes = {
+    	history: PropTypes.object,
+    }
+
     componentDidMount() {
         setTimeout(() => {
             this.props.history.push(`/menu`);

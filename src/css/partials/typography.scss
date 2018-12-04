@@ -1,0 +1,20 @@
+
+@font-face {
+    font-family: camelone;
+    src: url("fonts/camelone.otf") format("opentype");
+}
+
+// Font size
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 13px;
+
+// Heading Font
+$heading-font-family: camelone;
+$heading-font-color: rgba(85, 96, 111, 1);
+$heading-font-size: 85%;

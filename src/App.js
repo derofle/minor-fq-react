@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import initialStory from "./story";
 import initialMissions from "./missions";
 
-import Loading from "./components/controllers/Loading";
-import DialogueScreen from "./components/player/DialogueScreen";
+import Loading from "./components/handlers/Loading";
+import GameScreen from "./components/player/GameScreen";
 import MissionControl from "./components/parent/MissionControl";
 
 import base from "./base";
@@ -62,8 +62,6 @@ class App extends Component {
         // do nothing
   		}
 	  };
-
-  	console.log(this.props.location.pathname);
   }
 
 
@@ -121,7 +119,7 @@ class App extends Component {
 	if (this.props.location.pathname.includes("story")) {
   		return (
   			<Fragment>
-  				<DialogueScreen
+  				<GameScreen
 				  details={this.state.story[this.state.storyProgress]}
 				  nextDialogue={this.nextDialogue}
 				  />

@@ -4,7 +4,7 @@ import Typing from "react-typing-animation";
 class AnimatedTypingComponent extends Component {
     state = {
     	txt: "",
-    }
+	}
 
     loopBoolean = false
 

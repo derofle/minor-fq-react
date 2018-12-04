@@ -8,8 +8,9 @@ import Space from "../../images/backgrounds/space.png";
 import Spacecontrols from "../../images/backgrounds/spacecontrols.png";
 import Unsinkable from "../../images/backgrounds/unsinkable.png";
 import Vulcanus from "../../images/backgrounds/vulcanus.png";
+import ApproachSenate from "../../images/backgrounds/approach-senate.png";
 
-class Background extends Component {
+class BackgroundHandler extends Component {
     count = 0;
 
     state = {
@@ -77,6 +78,12 @@ class Background extends Component {
     			imgUrl: <img src={Etheria} alt={Etheria} className="background"/>,
     		});
     		this.count = 8;
+		}
+		if (this.props.location === "ApproachSenate" && this.count !== 9) {
+    		this.setState({
+    			imgUrl: <img src={ApproachSenate} alt={ApproachSenate} className="background"/>,
+    		});
+    		this.count = 9;
     	}
     }
 
@@ -89,4 +96,4 @@ class Background extends Component {
     }
 }
 
-export default Background;
+export default BackgroundHandler;

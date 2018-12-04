@@ -2,21 +2,21 @@ const intitialStory = [
 
 	{
 		character: "Joksin",
-		location: "Senate",
+		location: "ApproachSenate",
 		dialogue: "Guys! You made it!",
 		type: "dialogue",
 	},
 
 	{
 		character: "Joksin",
-		location: "Senate",
+		location: "ApproachSenate",
 		dialogue: "Welcome to the galactic senate, where decisions that affect the whole galaxy are made by people who sometimes know what they’re doing.",
 		type: "dialogue",
 	},
 
 	{
 		character: "Joksin",
-		location: "Senate",
+		location: "ApproachSenate",
 		dialogue: "Come on, quickly! The meeting is about to start! We have to show them earth isn’t empty, else they will blow it up.",
 		type: "dialogue",
 	},

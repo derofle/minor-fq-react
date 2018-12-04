@@ -29,6 +29,7 @@ module.exports = {
         "no-mixed-spaces-and-tabs": 0,
         "object-curly-newline": 0,
         "consistent-return": 0,
-        "class-methods-use-this": 0
+        "class-methods-use-this": 0,
+        "no-alert": 0
     }
 };

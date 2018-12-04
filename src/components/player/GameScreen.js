@@ -1,18 +1,15 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 
-import DialogueBox from "./DialogueBox";
-import MissionBox from "./MissionBox";
-import Sprite from "./Sprite";
-import DialogueName from "./DialogueName";
-import MissionName from "./MissionName";
-import Background from "./Background";
-import PlayerSettings from "./PlayerSettings";
+import DialogueBox from "./dialogue/DialogueBox";
+import MissionBox from "./mission/MissionBox";
+import SpriteHandler from "../handlers/SpriteHandler";
+import DialogueName from "./dialogue/DialogueName";
+import MissionName from "./mission/MissionName";
+import BackgroundHandler from "../handlers/BackgroundHandler";
+import Settings from "../Settings";
 
-import "../../css/player/dialogue.css";
-import "../../css/player/mission.css";
-
-class DialogueScreen extends Component {
+class GameScreen extends Component {
     static propTypes = {
     	details: PropTypes.shape({
     		character: PropTypes.string,
@@ -28,10 +25,10 @@ class DialogueScreen extends Component {
     	if (type === "dialogue") {
     		return (
     			<Fragment>
-    				<PlayerSettings />
+    				<div className="settings-upperleft"><Settings /></div>
     				<div className="dialogue-window">
-    					<Sprite character={character} />
-    					<Background location={location} />
+    					<SpriteHandler character={character} />
+    					<BackgroundHandler location={location} />
     					<DialogueName character={character} />
     					<DialogueBox dialogue={dialogue} nextDialogue={this.props.nextDialogue}/>
     				</div>
@@ -41,10 +38,10 @@ class DialogueScreen extends Component {
     	if (type === "mission") {
     		return (
     			<Fragment>
-    				<PlayerSettings />
+    				<div className="settings-upperleft"><Settings /></div>
     				<div className="mission-window">
-    					<Sprite character={character} />
-    					<Background location={location} />
+    					<SpriteHandler character={character} />
+    					<BackgroundHandler location={location} />
     					<MissionName character={character} />
     					<MissionBox dialogue={dialogue} />
     					<button onClick={this.props.nextDialogue} className="next-button">Next</button>
@@ -56,4 +53,4 @@ class DialogueScreen extends Component {
 }
 
 
-export default DialogueScreen;
+export default GameScreen;

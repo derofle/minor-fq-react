@@ -1,9 +1,14 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+
 import Mission from "./Mission";
 
-import "../../css/parent/missionencyclopedia.css";
-
 class MissionEncyclopedia extends Component {
+	static propTypes = {
+		history: PropTypes.object,
+		missions: PropTypes.array,
+	}
+
     render() {
     		return (
     			<Fragment>

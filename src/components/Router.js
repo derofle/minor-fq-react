@@ -8,7 +8,7 @@ import App from "../App";
 import NotFound from "./NotFound";
 import Aframe from "../AFrame";
 
-export default () => (
+const Router = () => (
 	<BrowserRouter>
 		<Switch>
 			<Route exact path="/" component={LandingPage} />
@@ -21,3 +21,5 @@ export default () => (
 		</Switch>
 	</BrowserRouter>
 );
+
+export default Router;

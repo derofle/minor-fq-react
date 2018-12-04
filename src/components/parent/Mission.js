@@ -11,14 +11,14 @@ class Mission extends Component {
 
   render() {
   	const { name, desc } = this.props.details;
-  	return (
-  		<li className="mission-list">
-  			<h3 className="mission-name">
-  				{name}
-  			</h3>
-  			<p>{desc}</p>
-  		</li>
-  	);
+		return (
+			<li className="mission-list">
+				<h3 className="mission-name">
+					{name}
+				</h3>
+				<p>{desc}</p>
+			</li>
+		);
   }
 }
 
