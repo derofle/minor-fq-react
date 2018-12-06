@@ -184,34 +184,34 @@ const intitialStory = [
 	},
 	{
 		character: "Joksin",
-		location: "Etheria",
+		location: "EtheriaTheater",
 		dialogue: "First you guys have to build a scene though. Why are you looking at me like that? Isn’t that how talent shows work on earth? You guys are weird.",
 		type: "dialogue",
 	},
 	{
 		character: "Joksin",
-		location: "Etheria",
+		location: "EtheriaTheater",
 		dialogue: "We’ve arrived on Etheria 13, but Morkaas won’t give us the time of day, we have to convince him earth is worth saving! You need to build a scene where you can perform some human art for Morkaas and the rest of Etheria 13. When you’re done building the scene, make sure to send a picture to mission control so we know that it passes inspection! Good luck!",
 		type: "mission",
 	},
 	{
 		character: "Joksin",
-		location: "Etheria",
+		location: "EtheriaTheater",
 		dialogue: "Great job with the scene, look: people are already coming to watch. Now you have to show off your skills. Morkaas is going to get his fuzzy socks blown off!. Take some time to prepare your performance, then show everybody how good humans are at art. Remember to record it to save for the future!",
 		type: "mission",
 	},
 	{
 		character: "Joksin",
-		location: "Etheria",
+		location: "EtheriaTheater",
 		dialogue: "Wow! I had no idea Humans could do any of those things! Hakaan has been lying about your planet. I promise I will do everything in my poweer to protect your people!",
 		type: "dialogue",
 	},
 	{
 		character: "Joksin",
-		location: "Etheria",
+		location: "EtheriaTheater",
 		dialogue: "VICTORY",
 		type: "mission",
-	}
+	},
 ];
 
 export default intitialStory;

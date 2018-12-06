@@ -84,8 +84,10 @@ class App extends Component {
 			this.setState({
 				storyProgress: this.state.storyProgress + 1,
 			});
+		} else {
+			this.props.history.push(`/finish`);
 		}
-	}
+	} 
   }
 
   prevDialogue = () => {

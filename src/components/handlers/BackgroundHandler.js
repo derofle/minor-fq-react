@@ -10,6 +10,8 @@ import Spacecontrols from "../../images/backgrounds/spacecontrols.png";
 import Unsinkable from "../../images/backgrounds/unsinkable.png";
 import Vulcanus from "../../images/backgrounds/vulcanus.png";
 import ApproachSenate from "../../images/backgrounds/approach-senate.png";
+import EtheriaTheater from "../../images/backgrounds/etheria-theater.png";
+import SandenaSettlement from "../../images/backgrounds/sandena-settlement.png";
 
 class BackgroundHandler extends Component {
 	static propTypes = {
@@ -90,6 +92,18 @@ class BackgroundHandler extends Component {
     			imgUrl: <img src={ApproachSenate} alt={ApproachSenate} className="background"/>,
     		});
     		this.count = 9;
+		}
+		if (this.props.location === "EtheriaTheater" && this.count !== 10) {
+    		this.setState({
+    			imgUrl: <img src={EtheriaTheater} alt={EtheriaTheater} className="background"/>,
+    		});
+    		this.count = 10;
+		}
+		if (this.props.location === "SandenaSettlement" && this.count !== 11) {
+    		this.setState({
+    			imgUrl: <img src={SandenaSettlement} alt={SandenaSettlement} className="background"/>,
+    		});
+    		this.count = 11;
     	}
     }
 

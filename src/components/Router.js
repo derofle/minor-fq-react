@@ -6,6 +6,7 @@ import MainMenu from "./MainMenu";
 import InputCode from "./InputCode";
 import App from "../App";
 import NotFound from "./NotFound";
+import Finish from "./Finish";
 import Aframe from "../AFrame";
 
 const Router = () => (
@@ -17,6 +18,7 @@ const Router = () => (
 			<Route path="/story/:storyID" component={App} />
 			<Route path="/missioncontrol/:storyID" component={App} />
 			<Route path="/aframe" component={Aframe} />
+			<Route path="/finish" component={Finish} />
 			<Route component={NotFound} />
 		</Switch>
 	</BrowserRouter>

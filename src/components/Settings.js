@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 
 import cogIcon from "../images/icons/settings.png";
+import placeHolderSettings from "../images/placeholdersettings.png";
 
 class Settings extends Component {
 	static propTypes = {
@@ -29,9 +30,15 @@ class Settings extends Component {
     		return (
     			<Fragment>
     				<img src={cogIcon} className="settings-icon" alt="Settings Icon" onClick={this.closeSettings}/>
+					<div className="blur"></div>
     				<div className="Settings">
-    					<p>Settings here please.</p>
-    					<button onClick={this.closeSettings}>Close</button>
+						<div className="settings-header">
+							<h2>SETTINGS</h2>
+							<button onClick={this.closeSettings}>X</button>
+							</div>
+						<div className="settings-content">
+    					<img src={placeHolderSettings} alt={placeHolderSettings} className="placeholder-settings"/>
+						</div>
     				</div>
     			</Fragment>
     		);

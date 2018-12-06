@@ -25,7 +25,7 @@ class GameScreen extends Component {
     	if (type === "dialogue") {
     		return (
     			<Fragment>
-    				<div className="settings-upperleft"><Settings /></div>
+    				<div className="settings-upperright"><Settings /></div>
     				<div className="dialogue-window">
     					<SpriteHandler character={character} />
     					<BackgroundHandler location={location} />
