@@ -12,6 +12,7 @@ import Settings from "../Settings";
 class GameScreen extends Component {
     static propTypes = {
     	details: PropTypes.shape({
+			name: PropTypes.string,
     		character: PropTypes.string,
     		dialogue: PropTypes.string,
     		location: PropTypes.string,
@@ -21,7 +22,7 @@ class GameScreen extends Component {
     }
 
     render() {
-    	const { character, dialogue, location, type } = this.props.details;
+    	const { name, character, dialogue, location, type } = this.props.details;
     	if (type === "dialogue") {
     		return (
     			<Fragment>
@@ -29,7 +30,7 @@ class GameScreen extends Component {
     				<div className="dialogue-window">
     					<SpriteHandler character={character} />
     					<BackgroundHandler location={location} />
-    					<NameBox name={character} />
+    					<NameBox name={name} />
     					<DialogueBox dialogue={dialogue} nextDialogue={this.props.nextDialogue}/>
     				</div>
     			</Fragment>
@@ -42,7 +43,7 @@ class GameScreen extends Component {
     				<div className="mission-window">
     					<SpriteHandler character={character} />
     					<BackgroundHandler location={location} />
-    					<MissionName character={character} />
+    					<MissionName name={name} />
     					<MissionBox dialogue={dialogue} />
     					<button onClick={this.props.nextDialogue} className="next-button">Next</button>
     				</div>

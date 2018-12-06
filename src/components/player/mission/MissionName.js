@@ -2,7 +2,7 @@ import React from "react";
 
 const MissionName = (props) => (
 	<div className="MissionName">
-		<p>{props.character}</p>
+		<p>{props.name}</p>
 	</div>
 );
 
