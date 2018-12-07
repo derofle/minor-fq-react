@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
-import initialStory from "./story";
+import initialStory from "./story_dut";
 import initialMissions from "./missions";
 
 import Loading from "./components/handlers/Loading";
