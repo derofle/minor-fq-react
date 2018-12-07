@@ -6,7 +6,7 @@ import MissionEncyclopedia from "./MissionEncyclopedia";
 import MissionFAQ from "./MissionFAQ";
 
 import FAQIcon from "../../images/icons/question.png";
-import encyclIcon from "../../images/icons/encyclopedia.png";
+import encyclIcon from "../../images/icons/missions.png";
 import cogIcon from "../../images/icons/settings.png";
 
 class MissionNav extends Component {
