@@ -12,6 +12,7 @@ import Vulcanus from "../../images/backgrounds/vulcanus.png";
 import ApproachSenate from "../../images/backgrounds/approach-senate.png";
 import EtheriaTheater from "../../images/backgrounds/etheria-theater.png";
 import SandenaSettlement from "../../images/backgrounds/sandena-settlement.png";
+import VulcanusBase from "../../images/backgrounds/vulcanus-base.png";
 
 class BackgroundHandler extends Component {
 	static propTypes = {
@@ -104,6 +105,12 @@ class BackgroundHandler extends Component {
     			imgUrl: <img src={SandenaSettlement} alt={SandenaSettlement} className="background"/>,
     		});
     		this.count = 11;
+		}
+		if (this.props.location === "VulcanusBase" && this.count !== 12) {
+    		this.setState({
+    			imgUrl: <img src={VulcanusBase} alt={VulcanusBase} className="background"/>,
+    		});
+    		this.count = 12;
     	}
     }
 
