@@ -329,7 +329,7 @@ const intitialStory = [
 		character: "Mirabeli",
 		location: "SandenaSettlement",
 		dialogue: "Sorry Selena kon hier niet zijn. Ze is de laatste tijd erg druk geweest. Maar Joksin zei dat jullie mij daarmee kunnen helpen? Mensen zijn echt goed in landbouw toch? Kun je ons er wat van laten zien? En maak alsjeblieft een paar foto’s die we kunnen gebruiken in onze nieuw kennisbank. Heel erg bedankt!",
-		type: "Mission",
+		type: "mission",
 	},
 	{
 		name: "Mirabeli",

@@ -329,7 +329,7 @@ const intitialStory = [
 		character: "Mirabeli",
 		location: "SandenaSettlement",
 		dialogue: "Hello again! Sorry Selena couldn’t be here, she’s been really busy lately. But Joksin tells me you can help with that? Humans are really good at farming right? Can you show us some of it? And please take some pictures that we can use in our new knowledge bank.Thank you so much",
-		type: "Mission",
+		type: "mission",
 	},
 	{
 		name: "Mirabeli",
