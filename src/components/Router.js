@@ -8,6 +8,7 @@ import App from "../App";
 import NotFound from "./NotFound";
 import Finish from "./Finish";
 import Aframe from "../AFrame";
+import SwipeDemo from "./SwipeDemo";
 
 const Router = () => (
 	<BrowserRouter>
@@ -18,6 +19,7 @@ const Router = () => (
 			<Route path="/story/:storyID" component={App} />
 			<Route path="/missioncontrol/:storyID" component={App} />
 			<Route path="/aframe" component={Aframe} />
+			<Route path="/swipedemo" component={SwipeDemo} />
 			<Route path="/finish" component={Finish} />
 			<Route component={NotFound} />
 		</Switch>
