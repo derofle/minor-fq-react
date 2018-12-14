@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 
 import MissionNav from "./MissionNav";
+import Tutorial from "./Tutorial";
 
 import BackwardsIcon from "../../images/icons/backward.png";
 import PauseIcon from "../../images/icons/pause.png";
@@ -22,6 +23,7 @@ class MissionControl extends Component {
 
 	state = {
 		changeIcon: PauseIcon,
+		tutorialDone: false,
 	}
 
 	pauseDialogue = () => {
@@ -38,25 +40,55 @@ class MissionControl extends Component {
 		}
 	}
 
-	render() {
-		return (
-			<Fragment>
-				<MissionNav
-					missions={this.props.missions}
-				/>
-				<div className="mission-buttons">
-					<img src={BackwardsIcon} alt="Backwards Icon" onClick={this.props.prevDialogue}/>
-					<img src={this.state.changeIcon} alt="Backwards Icon" onClick={this.pauseDialogue}/>
-					<img src={ForwardIcon} alt="Backwards Icon" onClick={this.props.nextDialogue}/>
-				</div>
-				<div className="missioncontrol">
-					<div className="missionWindow">
-						<p>Your kid is at slide {this.props.storyProgress + 1} of {this.props.story.length} slides</p>
-					</div>
-				</div>
-			</Fragment>
-		);
+	tutorialCompleted = () => {
+		this.setState({
+			tutorialDone: true,
+		});
 	}
+
+	render() {
+		if (!this.state.tutorialDone) {
+			return (
+				<Fragment>
+				<Tutorial tutorialCompleted={this.tutorialCompleted}/>
+					<MissionNav
+						missions={this.props.missions}
+					/>
+					<div className="mission-buttons">
+						<img src={BackwardsIcon} alt="Backwards Icon" onClick={this.props.prevDialogue}/>
+						<img src={this.state.changeIcon} alt="Backwards Icon" onClick={this.pauseDialogue}/>
+						<img src={ForwardIcon} alt="Backwards Icon" onClick={this.props.nextDialogue}/>
+					</div>
+					<div className="missioncontrol" >
+
+						<div className="missionWindow">
+							<p>Your kid is at slide {this.props.storyProgress + 1} of {this.props.story.length} slides</p>
+						</div>
+					</div>
+
+				</Fragment>
+			);
+		}
+		if (this.state.tutorialDone) {
+			return (
+				<Fragment>
+					<MissionNav
+						missions={this.props.missions}
+					/>
+					<div className="mission-buttons">
+						<img src={BackwardsIcon} alt="Backwards Icon" onClick={this.props.prevDialogue}/>
+						<img src={this.state.changeIcon} alt="Backwards Icon" onClick={this.pauseDialogue}/>
+						<img src={ForwardIcon} alt="Backwards Icon" onClick={this.props.nextDialogue}/>
+					</div>
+					<div className="missioncontrol">
+						<div className="missionWindow">
+							<p>Your kid is at slide {this.props.storyProgress + 1} of {this.props.story.length} slides</p>
+						</div>
+					</div>
+				</Fragment>
+			);
+	}
+}
 }
 
 export default MissionControl;
