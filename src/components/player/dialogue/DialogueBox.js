@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
+import { CSSTransition } from "react-transition-group";
 
 class DialogueBox extends Component {
 	state = {
 		data: "",
-		typedOut: false,
+		fade: false,
 	}
 
 	static propTypes = {
@@ -13,25 +14,28 @@ class DialogueBox extends Component {
 		nextDialogue: PropTypes.func,
 	}
 
+	componentDidMount() {
+		const newData = this.props.dialogue;
+		this.setState({ data: newData });
+	}
+
 	handleClick = () => {
 		this.props.nextDialogue();
-		this.forceUpdate();
+		this.setState({ fade: !this.state.fade });
 	}
 
 	componentDidUpdate() {
     	const newData = this.props.dialogue;
     	if (newData !== this.state.data) {
-    		this.setState({
-    			data: newData,
-			});
+			setTimeout(() => this.setState({ data: newData, fade: !this.state.fade }), 300);
     	}
 	}
 
 	render() {
 		return (
 			<Fragment>
-					<div className="DialogueBox" onClick={this.handleClick}>
-						<p>{this.props.dialogue}</p>
+					<div className={`DialogueBox ${this.state.fade ? "fade" : ""}`} onClick={this.handleClick} >
+						<p>{this.state.data}</p>
 					</div>
 			</Fragment>
 		);

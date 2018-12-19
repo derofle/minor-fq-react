@@ -9,10 +9,17 @@
     bottom: 10%;
     left: 10%;
     z-index: 5;
+    opacity: 1;
+    transition: opacity 300ms ease-in; //fade-in
   p {
     padding: 0 20px;
     font-size: 2vw;
     color: $offwhite;
   }
+}
+
+.fade {
+  transition: opacity 300ms ease-out;  //fade-out
+  opacity: 0.1;
 }
   
