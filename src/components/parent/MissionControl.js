@@ -46,7 +46,17 @@ class MissionControl extends Component {
 		});
 	}
 
+	breakpointProcess = (item, index) => {
+		if (item.breakpoint === true) {
+			const breakpoint = this.props.story.indexOf(item);
+			const breakpointNew = breakpoint + " ";
+			return breakpointNew;
+		}
+	}
+
 	render() {
+		const breakpoints = this.props.story.filter((dialogue) => dialogue.breakpoint === true);
+		const breakText = breakpoints.map(this.breakpointProcess);
 		if (!this.state.tutorialDone) {
 			return (
 				<Fragment>
@@ -63,6 +73,7 @@ class MissionControl extends Component {
 
 						<div className="missionWindow">
 							<p>Your kid is at slide {this.props.storyProgress + 1} of {this.props.story.length} slides</p>
+							<p>The breakpoints are slides:{breakText}</p>
 						</div>
 					</div>
 
@@ -83,6 +94,7 @@ class MissionControl extends Component {
 					<div className="missioncontrol">
 						<div className="missionWindow">
 							<p>Your kid is at slide {this.props.storyProgress + 1} of {this.props.story.length} slides</p>
+							<p>The breakpoints are slides: {breakText}</p>
 						</div>
 					</div>
 				</Fragment>

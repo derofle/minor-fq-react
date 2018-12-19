@@ -92,6 +92,7 @@ const intitialStory = [
 		location: "Senate",
 		dialogue: "Hakaan zei dat ze nog moesten stemmen. Dat geeft ons dus een paar dagen de tijd om de andere leden te overtuigen dat de aarde niet opgeblazen moet worden!",
 		type: "dialogue",
+		breakpoint: true,
 	},
 	{
 		name: "Joksin",
@@ -232,6 +233,7 @@ const intitialStory = [
 		location: "EtheriaTheater",
 		dialogue: "Wauw! Ik had geen idee dat de mensen van de aarde dat soort dingen konden doen! Hakaan heeft gelogen over jullie planeet! Ik beloof dat ik alles zal doen wat ik kan om jullie te beschermen!",
 		type: "dialogue",
+		breakpoint: true,
 	},
 	{
 		name: "Overwinning",
