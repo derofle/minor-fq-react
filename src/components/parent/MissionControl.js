@@ -49,7 +49,7 @@ class MissionControl extends Component {
 	breakpointProcess = (item, index) => {
 		if (item.breakpoint === true) {
 			const breakpoint = this.props.story.indexOf(item);
-			const breakpointNew = breakpoint + " ";
+			const breakpointNew = `${breakpoint} `;
 			return breakpointNew;
 		}
 	}
@@ -73,7 +73,7 @@ class MissionControl extends Component {
 
 						<div className="missionWindow">
 							<p>Your kid is at slide {this.props.storyProgress + 1} of {this.props.story.length} slides</p>
-							<p>The breakpoints are slides:{breakText}</p>
+							<p>The breakpoints are slides: {breakText}</p>
 						</div>
 					</div>
 
