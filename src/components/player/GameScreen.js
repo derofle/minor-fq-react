@@ -10,6 +10,10 @@ import BackgroundHandler from "../handlers/BackgroundHandler";
 import Settings from "../Settings";
 
 class GameScreen extends Component {
+	state = {
+		fade: false
+	}
+
     static propTypes = {
     	details: PropTypes.shape({
 			name: PropTypes.string,
@@ -18,8 +22,13 @@ class GameScreen extends Component {
     		location: PropTypes.string,
     		type: PropTypes.string,
     	}),
-    	nextDialogue: PropTypes.func,
-    }
+		nextDialogue: PropTypes.func,
+	}
+
+	fadeEffect = () => {
+		this.setState({ fade: !this.state.fade });
+		setTimeout(() => this.setState({ fade: !this.state.fade }), 300);
+	}
 
     render() {
     	const { name, character, dialogue, location, type } = this.props.details;
@@ -30,8 +39,16 @@ class GameScreen extends Component {
     				<div className="dialogue-window">
     					<SpriteHandler character={character} />
     					<BackgroundHandler location={location} />
-    					<NameBox name={name} />
-    					<DialogueBox dialogue={dialogue} nextDialogue={this.props.nextDialogue}/>
+    					<NameBox
+							name={name}
+							fade={this.state.fade}
+							/>
+    					<DialogueBox
+							dialogue={dialogue}
+							nextDialogue={this.props.nextDialogue}
+							fadeEffect={this.fadeEffect}
+							fade={this.state.fade}
+							/>
     				</div>
     			</Fragment>
     		);

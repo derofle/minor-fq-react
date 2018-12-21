@@ -9,7 +9,7 @@ class NameBox extends Component {
 
 	render() {
 		return (
-			<div className="NameBox">
+			<div className={`NameBox ${this.props.fade ? "fade" : ""}`}>
 				<p>{this.props.name}</p>
 			</div>
 		);
