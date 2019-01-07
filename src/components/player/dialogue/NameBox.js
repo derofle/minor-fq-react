@@ -11,6 +11,7 @@ class NameBox extends Component {
 	static propTypes = {
 		history: PropTypes.object,
 		name: PropTypes.string,
+		type: PropTypes.string,
 	}
 
 	componentDidMount() {
@@ -24,12 +25,25 @@ class NameBox extends Component {
 	}
 
 	render() {
+		if (this.props.type === "mainname" && this.props.name !== "none") {
 		return (
 			<div className={`NameBox ${this.props.fade ? "fade" : ""}`}>
 				<img src={nameboxImage} alt={nameboxImage} className="nameboxImage"/>
 				<p>{this.state.data}</p>
 			</div>
 		);
+		}
+		if (this.props.type === "sidename" && this.props.name !== "none") {
+			return (
+				<div className={`SideNameBox ${this.props.fade ? "fade" : ""}`}>
+					<img src={nameboxImage} alt={nameboxImage} className="nameboxImage"/>
+					<p>{this.state.data}</p>
+				</div>
+			);
+		}
+		if (this.props.name === "none") {
+			return null;
+		}
 	}
 }
 

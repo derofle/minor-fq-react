@@ -3,6 +3,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "ApproachSenate",
 		dialogue: "Jongens! Jullie hebben het gehaald!",
 		type: "dialogue",
@@ -11,6 +13,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "ApproachSenate",
 		dialogue: "Welkom bij de Galactische Senaat. Hier worden beslissingen gemaakt die invloed hebben op de gehele melkweg door mensen die soms weten wat ze doen.",
 		type: "dialogue",
@@ -19,6 +23,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "ApproachSenate",
 		dialogue: "Kom snel! De vergadering gaat beginnen! Wij moeten ze laten zien dat de aarde niet een verlaten planeet is, want anders blazen zij het op!",
 		type: "dialogue",
@@ -26,13 +32,17 @@ const intitialStory = [
 	{
 		name: "Hakaan",
 		character: "Hakaan",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "Senate",
-		dialogue: "Ah, Joksin Schura, ik stond op het punt te vertrekken, aan wie heb ik het genoegen?",
+		dialogue: "Ah, Joksin Schura, ik stond op het punt te vertrekken, wat is de reden van jouw bezoek?",
 		type: "dialogue",
 	},
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "Hakaan",
+		sidecharacter: "Hakaan",
 		location: "Senate",
 		dialogue: "Hou op Hakaan, wij weten over de vergadering en wij gaan er voor zorgen dat jij de aarde met rust laat!",
 		type: "dialogue",
@@ -40,6 +50,8 @@ const intitialStory = [
 	{
 		name: "Hakaan",
 		character: "Hakaan",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "Senate",
 		dialogue: "Welke vergadering? Oh, die over Snarfland? Ohoho, wij zijn het er met zijn allen over eens geworden dat niemand die 'troep' zal missen als het weg is.",
 		type: "dialogue",
@@ -47,6 +59,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "Hakaan",
+		sidecharacter: "Hakaan",
 		location: "Senate",
 		dialogue: "Je hebt de geplande tijd van de vergadering aangepast?! Dat kunnen je niet zomaar doen! Hoe moesten wij dit weten?",
 		type: "dialogue",
@@ -54,6 +68,8 @@ const intitialStory = [
 	{
 		name: "Hakaan",
 		character: "Hakaan",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "Senate",
 		dialogue: "Je ziet het toch, de tijd was aangepast dus kennelijk kunnen wij dat zomaar wel doen.",
 		type: "dialogue",
@@ -61,6 +77,8 @@ const intitialStory = [
 	{
 		name: "Hakaan",
 		character: "Hakaan",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "Senate",
 		dialogue: "We gaan binnenkort erover stemmen, dus als je klachten hebt, kun je die naar het kantoor van de senator sturen.",
 		type: "dialogue",
@@ -68,6 +86,8 @@ const intitialStory = [
 	{
 		name: "Hakaan",
 		character: "Hakaan",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "Senate",
 		dialogue: "Als je me nu wilt excuseren, ik moet namelijk toezicht houden op een verfdroogwedstrijd",
 		type: "dialogue",
@@ -75,6 +95,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Senate",
 		dialogue: "AAARGGGH! Die sluwe senator!!!",
 		type: "dialogue",
@@ -82,6 +104,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Senate",
 		dialogue: "Okay, het is nu niet de tijd om boos te worden. We moeten naar oplossingen zoeken!",
 		type: "dialogue",
@@ -89,6 +113,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Senate",
 		dialogue: "Hakaan zei dat ze nog moesten stemmen. Dat geeft ons dus een paar dagen de tijd om de andere leden te overtuigen dat de aarde niet opgeblazen moet worden!",
 		type: "dialogue",
@@ -97,6 +123,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Senate",
 		dialogue: "De Galactische Senaat heeft 5 leden. Op dit moment willen ze allemaal de aarde vernietigen, maar als we 3 van hen van gedachten kunnen doen veranderen, zullen we de meerderheid hebben. Hakaan zal dan zijn duistere plannen moeten staken.",
 		type: "dialogue",
@@ -104,6 +132,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Senate",
 		dialogue: "Blijven jullie hier om een sterrenkaart te maken.! Ik ben zo terug! Ik moet namelijk eerst nog wat telefoontjes plegen!",
 		type: "dialogue",
@@ -118,6 +148,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Senate",
 		dialogue: "Wauw, dat is een geweldige sterrenkaart! Laten we nu geen tijd meer verspillen, we hebben veel melkwegreizen op de planning staan en niet veel tijd!",
 		type: "dialogue",
@@ -125,6 +157,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Senate",
 		dialogue: "NAAR ETHERIA 13!!",
 		type: "dialogue",
@@ -132,20 +166,26 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Etheria",
 		dialogue: "De Roos van Eteria 13 is een kunstenaars collectief – dat is een duur woord voor een aantal samenlevende mensen – met hun hoofdbasis op Eteria 13. Als we er voor willen zorgen dat ze aan onze kant staan dan moeten we ze wat indrukwekkende menselijk kunststukken laten zien.",
 		type: "dialogue",
 	},
 	{
 		name: "Joksin",
-		character: "Morkaas",
+		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "Morkaas",
 		location: "Etheria",
 		dialogue: "Hun leider Morkaas was een soldaat, maar hij ging met pensioen om schilder en danser te worden. Hij neemt de grote beslissingen hier, maar hij maakt ze gebaseerd op wat de bewoners willen.",
 		type: "dialogue",
 	},
 	{
 		name: "Joksin",
-		character: "Morkaas",
+		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Etheria",
 		dialogue: "Voordat jullie  het vragen, nee, er zijn geen andere Eteria’s. Ze hebben het nummer 13 genoemd omdat het simpelweg cool staat.",
 		type: "dialogue",
@@ -153,6 +193,8 @@ const intitialStory = [
 	{
 		name: "Morkaas",
 		character: "Morkaas",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Etheria",
 		dialogue: "Ga alsjeblieft weg. Ik heb geen tijd voor onbeschaafde levensvormen.",
 		type: "dialogue",
@@ -160,6 +202,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "Morkaas",
+		sidecharacter: "Morkaas",
 		location: "Etheria",
 		dialogue: "Maar...",
 		type: "dialogue",
@@ -167,6 +211,8 @@ const intitialStory = [
 	{
 		name: "Morkaas",
 		character: "Morkaas",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "Etheria",
 		dialogue: "Geen gemaar, ga weg. Ik dien niet gestoord te worden wanneer ik naar Ruimte Factor kijk.",
 		type: "dialogue",
@@ -174,6 +220,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Etheria",
 		dialogue: "Uggghhhh, als alle senatoren zo zijn, dan zal ik…",
 		type: "dialogue",
@@ -181,6 +229,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Etheria",
 		dialogue: "Iets schoppen...",
 		type: "dialogue",
@@ -188,6 +238,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Etheria",
 		dialogue: "Heel hard!",
 		type: "dialogue",
@@ -195,6 +247,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Etheria",
 		dialogue: "En dan gaat het kapot!",
 		type: "dialogue",
@@ -202,6 +256,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Etheria",
 		dialogue: "Oké terug naar de tekentafel. Hij zei dat hij Ruimte Factor zou gaan kijken toch? Laten we een eigen Ruimte Factor maken zodat hij jullie daar kan zien optreden!",
 		type: "dialogue",
@@ -209,6 +265,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "EtheriaTheater",
 		dialogue: "Eerst moeten jullie een scène bouwen. Waarom kijken jullie me zo aan? Is dat niet hoe een talentenjacht werkt op aarde? Jullie zijn vreemder dan ik dacht..",
 		type: "dialogue",
@@ -230,6 +288,8 @@ const intitialStory = [
 	{
 		name: "Morkaas",
 		character: "Morkaas",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "EtheriaTheater",
 		dialogue: "Wauw! Ik had geen idee dat de mensen van de aarde dat soort dingen konden doen! Hakaan heeft gelogen over jullie planeet! Ik beloof dat ik alles zal doen wat ik kan om jullie te beschermen!",
 		type: "dialogue",
@@ -245,20 +305,26 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Sandena",
 		dialogue: "De volgende halte is Sandena, de leefomgeving van De Kayli.",
 		type: "dialogue",
 	},
 	{
 		name: "Joksin",
-		character: "Selena",
+		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Sandena",
 		dialogue: "De Kayli houden van biologie en landbouw, maar een paar jaar geleden verloren ze hun grote kennis in een mysterieus ongeluk. Tegenwoordig kopen zij hun eten van de planeet van die vreselijke Hakaan, De Verenigde Heerschappij, om te overleven.",
 		type: "dialogue",
 	},
 	{
 		name: "Joksin",
-		character: "Selena",
+		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "Selena",
 		location: "Sandena",
 		dialogue: "Selena wil eigenlijk de aarde wel redden, maar als ze niet stemt zoals Hakaan zegt dan zal het volk er onder gaan lijden. Hakaan zal dan zeker geen eten meer verkopen aan De Kayli..",
 		type: "dialogue",
@@ -266,6 +332,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "Sandena",
 		dialogue: "Gelukkig zijn jullie mensen echter geweldige boeren! Toch? Dus misschien kunnen jullie De Kayli wat trucjes laten zien zodat ze niet op Hakaan hoeven te vertrouwen voor eten en zodat zij kunnen stemmen zoals zij zelf graag willen.",
 		type: "dialogue",
@@ -273,6 +341,8 @@ const intitialStory = [
 	{
 		name: "Selena",
 		character: "Selena",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "SandenaSettlement",
 		dialogue: "Hey! Fantastisch dat je hier bent maar ik ben momenteel heel erg druk. Kun je terug komen over uhm… 8 weken?",
 		type: "dialogue",
@@ -280,6 +350,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "SandenaSettlement",
 		dialogue: "Alsjeblieft, dit is heel belangrijk!!",
 		type: "dialogue",
@@ -287,6 +359,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "SandenaSettlement",
 		dialogue: "Ze liep.. gewoon weg..",
 		type: "dialogue",
@@ -294,6 +368,8 @@ const intitialStory = [
 	{
 		name: "Mirabeli",
 		character: "Mirabeli",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "SandenaSettlement",
 		dialogue: "Hey jongens, sorry voor het gedrag van Selena, Vroeger was zij nooit zo maar ze probeert alles in orde te maken voor iedereen en ze heeft maar 2 handen. Ik ben haar assistent, Mirabeli. Misschien kan ik jullie verder op weg helpen?",
 		type: "dialogue",
@@ -301,6 +377,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "Mirabeli",
+		sidecharacter: "Mirabeli",
 		location: "SandenaSettlement",
 		dialogue: "Wij hebben gehoord over jullie problemen met landbouw en zijn hier om jullie te helpen!",
 		type: "dialogue",
@@ -308,6 +386,8 @@ const intitialStory = [
 	{
 		name: "Mirabeli",
 		character: "Mirabeli",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "SandenaSettlement",
 		dialogue: "Dat klopt.. Zoals je ziet kunnen we nauwelijks iets groeien en zelfs met de hulp van die achterbakse mensen van De Verenigde Heerschappij komen mensen amper rond. Was er maar iets dat wij konden doen.",
 		type: "dialogue",
@@ -315,6 +395,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "Mirabeli",
+		sidecharacter: "Mirabeli",
 		location: "SandenaSettlement",
 		dialogue: "Jullie kunnen ook iets doen! Deze mensen kunnen jullie kennis bijbrengen over landbouw zodat jullie zelf eten kunnen oogsten. Het enige wat wij terug vragen is een stem van jullie om de aarde te beschermen ",
 		type: "dialogue",
@@ -322,6 +404,8 @@ const intitialStory = [
 	{
 		name: "Mirabeli",
 		character: "Mirabeli",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "SandenaSettlement",
 		dialogue: "Dat zou geweldig zijn! Vertel ons alsjeblieft hoe het moet. Ik zal er dan voor zorgen dat alles bij Selena terecht komt.",
 		type: "dialogue",
@@ -336,6 +420,8 @@ const intitialStory = [
 	{
 		name: "Mirabeli",
 		character: "Mirabeli",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "SandenaSettlement",
 		dialogue: "Dat is ongelofelijk! Dit moet Selena weten en zien! Wacht, ik ben zo terug!",
 		type: "dialogue",
@@ -343,6 +429,8 @@ const intitialStory = [
 	{
 		name: "Selena",
 		character: "Selena",
+		sidename: "none",
+		sidecharacter: "none",
 		location: "SandenaSettlement",
 		dialogue: "De velden… ze zijn.. ze zijn aan het groeien!! Hebben jullie dit gedaan aardelingen?!",
 		type: "dialogue",
@@ -350,6 +438,8 @@ const intitialStory = [
 	{
 		name: "Joksin",
 		character: "Joksin",
+		sidename: "Selena",
+		sidecharacter: "Selena",
 		location: "SandenaSettlement",
 		dialogue: "Dat hebben zij zeker! Is het niet geweldig? Een slim soort als dit moet toch zeker bescherm worden?",
 		type: "dialogue",
@@ -357,6 +447,8 @@ const intitialStory = [
     {
 		name: "Selena",
 		character: "Selena",
+		sidename: "Joksin",
+		sidecharacter: "Joksin",
 		location: "SandenaSettlement",
 		dialogue: "Absoluut, geef me een moment om mijn spullen in te pakken. Ik ga terug naar het senaat om ze een stuk van mijn verstand te geven.",
 		type: "dialogue",

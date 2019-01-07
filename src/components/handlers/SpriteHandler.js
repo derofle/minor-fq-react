@@ -15,6 +15,7 @@ class SpriteHandler extends Component {
 	static propTypes = {
 		history: PropTypes.object,
 		character: PropTypes.string,
+		type: PropTypes.string,
 	}
 
     count = 0;
@@ -34,67 +35,78 @@ class SpriteHandler extends Component {
     handleChange = () => {
     	if (this.props.character === "Joksin" && this.count !== 1) {
     		this.setState({
-    			imgUrl: <img src={Joksin} alt={Joksin} className="sprite"/>,
+    			imgUrl: <img src={Joksin} alt={Joksin} className={this.props.type}/>,
     		});
     		this.count = 1;
     	}
     	if (this.props.character === "Professor Slimvolt" && this.count !== 2) {
     		this.setState({
-    			imgUrl: <img src={Professor} alt={Professor} className="sprite"/>,
+    			imgUrl: <img src={Professor} alt={Professor} className={this.props.type}/>,
     		});
     		this.count = 2;
     	}
     	if (this.props.character === "Selena" && this.count !== 3) {
     		this.setState({
-    			imgUrl: <img src={Selena} alt={Selena} className="sprite"/>,
+    			imgUrl: <img src={Selena} alt={Selena} className={this.props.type}/>,
     		});
     		this.count = 3;
     	}
     	if (this.props.character === "Sjaksjok" && this.count !== 4) {
     		this.setState({
-    			imgUrl: <img src={Sjaksjok} alt={Sjaksjok} className="sprite"/>,
+    			imgUrl: <img src={Sjaksjok} alt={Sjaksjok} className={this.props.type}/>,
     		});
     		this.count = 4;
     	}
     	if (this.props.character === "Tando Stazak" && this.count !== 5) {
     		this.setState({
-    			imgUrl: <img src={Tando} alt={Tando} className="sprite"/>,
+    			imgUrl: <img src={Tando} alt={Tando} className={this.props.type}/>,
     		});
     		this.count = 5;
     	}
     	if (this.props.character === "Morkaas" && this.count !== 6) {
     		this.setState({
-    			imgUrl: <img src={Morkaas} alt={Morkaas} className="sprite"/>,
+    			imgUrl: <img src={Morkaas} alt={Morkaas} className={this.props.type}/>,
     		});
     		this.count = 6;
     	}
     	if (this.props.character === "Mirabeli" && this.count !== 7) {
     		this.setState({
-    			imgUrl: <img src={Mirabeli} alt={Mirabeli} className="sprite"/>,
+    			imgUrl: <img src={Mirabeli} alt={Mirabeli} className={this.props.type}/>,
     		});
     		this.count = 7;
     	}
     	if (this.props.character === "Aeros" && this.count !== 8) {
     		this.setState({
-    			imgUrl: <img src={Aeros} alt={Aeros} className="sprite"/>,
+    			imgUrl: <img src={Aeros} alt={Aeros} className={this.props.type}/>,
     		});
     		this.count = 8;
 		}
 
 		if (this.props.character === "Hakaan" && this.count !== 9) {
     		this.setState({
-    			imgUrl: <img src={Hakaan} alt={Hakaan} className="sprite"/>,
+    			imgUrl: <img src={Hakaan} alt={Hakaan} className={this.props.type}/>,
     		});
     		this.count = 9;
+		}
+		if (this.props.character === "none" && this.count !== 10) {
+    		this.setState({
+    			imgUrl: null,
+    		});
+    		this.count = 10;
     	}
     }
 
     render() {
+		if (this.props.character !== "none") {
     	return (
     		<Fragment>
     			{this.state.imgUrl}
     		</Fragment>
-    	);
+		);
+		}
+		if (this.props.character === "none") {
+			return null;
+		}
     }
 }
 export default SpriteHandler;

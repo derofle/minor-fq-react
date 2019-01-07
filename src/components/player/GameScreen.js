@@ -34,18 +34,23 @@ class GameScreen extends Component {
 	}
 
     render() {
-    	const { name, character, dialogue, location, type } = this.props.details;
+    	const { name, character, dialogue, location, type, sidecharacter, sidename } = this.props.details;
     	if (type === "dialogue") {
     		return (
     			<Fragment>
     				<div className="settings-upperright"><Settings /></div>
     				<div className="dialogue-window">
-    					<SpriteHandler character={character} />
+    					<SpriteHandler character={character} type="maincharacter"/>
+						<SpriteHandler character={sidecharacter} type="sidecharacter" />
     					<BackgroundHandler location={location} />
     					<NameBox
 							name={name}
 							fade={this.state.fade}
-							/>
+							type="mainname"/>
+						<NameBox
+							name={sidename}
+							fade={this.state.fade}
+							type="sidename"/>
     					<DialogueBox
 							dialogue={dialogue}
 							nextDialogue={this.props.nextDialogue}

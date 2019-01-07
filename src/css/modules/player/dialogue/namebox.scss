@@ -21,6 +21,29 @@
   }
 }
 
+.SideNameBox {
+  bottom: 25%;
+  left: 33%;
+  position: absolute;
+  width: auto;
+  padding: 0px 20px;
+  height: 50px;
+  z-index: 8;
+  opacity: 1;
+  transition: opacity 300ms ease-in; //fade-in
+p {
+  position: absolute;
+  margin: 0;
+  padding: 0px 0;
+  text-align: center;
+  font-size: 4vw;
+  font-family: $heading-font-family;
+  color: $offwhite;
+  z-index: 10;
+  margin-left: -150px;
+}
+}
+
 .nameboxImage {
   position: absolute;
   width: 20vw;

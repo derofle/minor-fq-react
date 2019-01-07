@@ -6,18 +6,24 @@
 .dialogue-window {
     width: 100%;
     height: 100vh;
-.sprite {
+.maincharacter {
     height: 500px;
     bottom: 7%;
     right: 13%;
     position: absolute;
   }
+.sidecharacter {
+    height: 500px;
+    position: absolute;
+    bottom: 7%;
+    left: 13%;
+}
 }
 
 .mission-window {
     width: 100%;
     height: 100vh;
-.sprite {
+.maincharacter {
     height: 500px;
     bottom: 7%;
     left: 7%;
