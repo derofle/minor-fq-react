@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 
+import textboxImage from "../../../images/ui/textbox.png";
+
 class DialogueBox extends Component {
 	state = {
 		data: "",
@@ -33,6 +35,7 @@ class DialogueBox extends Component {
 		return (
 			<Fragment>
 					<div className={`DialogueBox ${this.props.fade ? "fade" : ""}`} onClick={this.handleClick} >
+						<img src={textboxImage} alt={textboxImage} className="textboxImage"/>
 						<p>{this.state.data}</p>
 					</div>
 			</Fragment>

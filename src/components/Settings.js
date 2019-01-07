@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 
-import cogIcon from "../images/icons/settings.png";
+import cogIcon from "../images/ui/story-settings.png";
 import placeHolderSettings from "../images/placeholdersettings.png";
 
 class Settings extends Component {

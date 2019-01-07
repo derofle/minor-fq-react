@@ -9,9 +9,12 @@ import MissionName from "./mission/MissionName";
 import BackgroundHandler from "../handlers/BackgroundHandler";
 import Settings from "../Settings";
 
+import buttonImage from "../../images/ui/button.png";
+
+
 class GameScreen extends Component {
 	state = {
-		fade: false
+		fade: false,
 	}
 
     static propTypes = {
@@ -60,9 +63,14 @@ class GameScreen extends Component {
     				<div className="mission-window">
     					<SpriteHandler character={character} />
     					<BackgroundHandler location={location} />
-    					<MissionName name={name} />
-    					<MissionBox dialogue={dialogue} />
-    					<button onClick={this.props.nextDialogue} className="next-button">Next</button>
+    					<MissionName name={name} fade={this.state.fade}/>
+    					<MissionBox dialogue={dialogue} fade={this.state.fade}/>
+						<img src={buttonImage} alt={buttonImage} className="buttonImage" onClick={this.props.nextDialogue}/>
+    					<button	onClick={(e) => {
+							this.fadeEffect();
+							this.props.nextDialogue();
+							}}
+						 className="next-button">Volgende</button>
     				</div>
     			</Fragment>
     		);

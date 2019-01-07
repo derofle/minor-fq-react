@@ -1,15 +1,23 @@
 .MissionBox {
     width: 60%;
     height: 80%;
-    border-radius: 10px;
-    background-color: $window-color;
     position: absolute;
     bottom: 10%;
     right: 7%;
+    transition: opacity 300ms ease-in;
    p {
-    padding: 0 20px;
-    font-size: 2.5vw;
+    position: absolute;
+    top: 5%;
+    padding: 0 30px;
+    font-size: 2vw;
     text-align: center;
     color: $offwhite;
+    z-index: 10;
   }
+}
+
+
+.missionboxImage {
+  position: absolute;
+  width: 60vw;
 }

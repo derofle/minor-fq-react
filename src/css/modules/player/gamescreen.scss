@@ -26,15 +26,29 @@
 }
 
 .next-button {
-    color: $heading-font-color;
-    background-color: $offwhite;
+    
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: $offwhite;
     padding: 15px;
     text-align: center;
     display: inline-block;
     font-size: 4vw;
     font-family: "camelone";
-    bottom: 7%;
+    bottom: 17%;
+    position: absolute;
+    right: 12%;
+    border-radius: 10px;
+}
+
+.buttonImage {
+    display: inline-block;
+    bottom: 17%;
     position: absolute;
     right: 10%;
-    border-radius: 10px;
+    width: 20vw;
 }
