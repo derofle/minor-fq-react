@@ -34,12 +34,7 @@ class NameBox extends Component {
 		);
 		}
 		if (this.props.type === "sidename" && this.props.name !== "none") {
-			return (
-				<div className={`SideNameBox ${this.props.fade ? "fade" : ""}`}>
-					<img src={nameboxImage} alt={nameboxImage} className="nameboxImage"/>
-					<p>{this.state.data}</p>
-				</div>
-			);
+			return null;
 		}
 		if (this.props.name === "none") {
 			return null;
