@@ -34,7 +34,7 @@ class GameScreen extends Component {
 	}
 
     render() {
-    	const { name, character, dialogue, location, type, sidecharacter, sidename } = this.props.details;
+    	const { name, character, dialogue, location, type, sidecharacter } = this.props.details;
     	if (type === "dialogue") {
     		return (
     			<Fragment>
@@ -47,10 +47,6 @@ class GameScreen extends Component {
 							name={name}
 							fade={this.state.fade}
 							type="mainname"/>
-						<NameBox
-							name={sidename}
-							fade={this.state.fade}
-							type="sidename"/>
     					<DialogueBox
 							dialogue={dialogue}
 							nextDialogue={this.props.nextDialogue}
@@ -70,6 +66,22 @@ class GameScreen extends Component {
     					<BackgroundHandler location={location} />
     					<MissionName name={name} fade={this.state.fade}/>
     					<MissionBox dialogue={dialogue} fade={this.state.fade}/>
+						<img src={buttonImage} alt={buttonImage} className="buttonImage" onClick={this.props.nextDialogue}/>
+    					<button	onClick={(e) => {
+							this.fadeEffect();
+							this.props.nextDialogue();
+							}}
+						 className="next-button">Volgende</button>
+    				</div>
+    			</Fragment>
+    		);
+		}
+		if (type === "transition") {
+    		return (
+    			<Fragment>
+    				<div className="settings-upperleft"><Settings /></div>
+    				<div className="transition-window">	
+    					<BackgroundHandler location={location} />
 						<img src={buttonImage} alt={buttonImage} className="buttonImage" onClick={this.props.nextDialogue}/>
     					<button	onClick={(e) => {
 							this.fadeEffect();

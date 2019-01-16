@@ -11,6 +11,16 @@ const intitialStory = [
 	},
 
 	{
+		name: "",
+		character: "",
+		sidename: "",
+		sidecharacter: "",
+		location: "ApproachSenate",
+		dialogue: "",
+		type: "transition",
+	},
+
+	{
 		name: "Joksin",
 		character: "Joksin",
 		sidename: "none",

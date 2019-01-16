@@ -21,7 +21,9 @@ class SpriteHandler extends Component {
     count = 0;
 
     state = {
-    	imgUrl: null,
+		character: "",
+		imgUrl: null,
+		fade: false,
     }
 
     componentDidMount() {
@@ -30,12 +32,17 @@ class SpriteHandler extends Component {
 
     componentDidUpdate() {
     	this.handleChange();
-    }
+	}
+	
+	fadeEffect = () => {
+		this.setState({ fade: !this.state.fade });
+		setTimeout(() => this.setState({ fade: !this.state.fade }), 300);
+	}
 
     handleChange = () => {
     	if (this.props.character === "Joksin" && this.count !== 1) {
     		this.setState({
-    			imgUrl: <img src={Joksin} alt={Joksin} className={this.props.type}/>,
+				imgUrl: <img src={Joksin} alt={Joksin} className={this.props.type}/>,
     		});
     		this.count = 1;
     	}
