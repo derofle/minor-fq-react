@@ -8,7 +8,7 @@ import Sjaksjok from "../../images/sprites/sjaksjok.png";
 import Tando from "../../images/sprites/tando.png";
 import Morkaas from "../../images/sprites/morkaas.png";
 import Mirabeli from "../../images/sprites/mirabeli.png";
-import Aeros from "../../images/sprites/aeros.png";
+import Areos from "../../images/sprites/areos.png";
 import Hakaan from "../../images/sprites/hakaan.png";
 
 class SpriteHandler extends Component {
@@ -82,9 +82,9 @@ class SpriteHandler extends Component {
     		});
     		this.count = 7;
     	}
-    	if (this.props.character === "Aeros" && this.count !== 8) {
+    	if (this.props.character === "Areos" && this.count !== 8) {
     		this.setState({
-    			imgUrl: <img src={Aeros} alt={Aeros} className={this.props.type}/>,
+    			imgUrl: <img src={Areos} alt={Areos} className={this.props.type}/>,
     		});
     		this.count = 8;
 		}
