@@ -13,6 +13,8 @@ import ApproachSenate from "../../images/backgrounds/approach-senate.png";
 import EtheriaTheater from "../../images/backgrounds/etheria-theater.png";
 import SandenaSettlement from "../../images/backgrounds/sandena-settlement.png";
 import VulcanusBase from "../../images/backgrounds/vulcanus-base.png";
+import IntroRose from "../../images/backgrounds/intro-rose.png";
+import IntroKayli from "../../images/backgrounds/intro-kaili.png";
 
 class BackgroundHandler extends Component {
 	static propTypes = {
@@ -111,6 +113,18 @@ class BackgroundHandler extends Component {
     			imgUrl: <img src={VulcanusBase} alt={VulcanusBase} className="background"/>,
     		});
     		this.count = 12;
+		}
+		if (this.props.location === "IntroRose" && this.count !== 13) {
+    		this.setState({
+    			imgUrl: <img src={IntroRose} alt={IntroRose} className="background"/>,
+    		});
+    		this.count = 13;
+		}
+		if (this.props.location === "IntroKayli" && this.count !== 14) {
+    		this.setState({
+    			imgUrl: <img src={IntroKayli} alt={IntroKayli} className="background"/>,
+    		});
+    		this.count = 14;
     	}
     }
 
