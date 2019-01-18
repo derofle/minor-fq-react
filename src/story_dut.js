@@ -110,7 +110,7 @@ const intitialStory = [
 		sidename: "Hakaan",
 		sidecharacter: "Hakaan",
 		location: "Senate",
-		dialogue: "Je hebt de geplande tijd van de vergadering aangepast?! Dat kunnen je niet zomaar doen! Hoe moesten wij dat weten?",
+		dialogue: "Je hebt de geplande tijd van de vergadering aangepast?! Dat kunnen jullie niet zomaar doen! Hoe moesten wij dat weten?",
 		type: "dialogue",
 	},
 	{
@@ -504,7 +504,7 @@ const intitialStory = [
 		sidename: "none",
 		sidecharacter: "Joksin",
 		location: "SandenaSettlement",
-		dialogue: "Zijn dit mensen van aarde? Het spijt me van jullie planeet, kon er niks meer aan veranderen helaas.",
+		dialogue: "Zijn dit mensen van aarde? Het spijt me van jullie planeet, kan er niks meer aan veranderen helaas.",
 		type: "dialogue",
 	},
 	{
@@ -894,7 +894,7 @@ const intitialStory = [
 		type: "dialogue",
 	},
 	{
-		name: "Een verrassende ontwikkeling",
+		name: "Soep Experiment",
 		character: "Joksin",
 		location: "VulcanusBase",
 		dialogue: "De Soepkom van Vulcanus 5 is in zicht, nu moeten we de juiste vinden! Maak wat testvloeistof en giet het in 3 verschillende doorzichtige schaaltjes, bij de neppe zal de kleur van de vloeistof veranderen. Neem een leuke foto van het resultaat wanneer je klaar bent.",
