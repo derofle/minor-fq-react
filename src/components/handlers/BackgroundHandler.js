@@ -15,6 +15,7 @@ import SandenaSettlement from "../../images/backgrounds/sandena-settlement.png";
 import VulcanusBase from "../../images/backgrounds/vulcanus-base.png";
 import IntroRose from "../../images/backgrounds/intro-rose.png";
 import IntroKayli from "../../images/backgrounds/intro-kaili.png";
+import VulcanusVault from "../../images/backgrounds/vulcanus-vault.png";
 
 class BackgroundHandler extends Component {
 	static propTypes = {
@@ -125,6 +126,12 @@ class BackgroundHandler extends Component {
     			imgUrl: <img src={IntroKayli} alt={IntroKayli} className="background"/>,
     		});
     		this.count = 14;
+		}
+		if (this.props.location === "VulcanusVault" && this.count !== 15) {
+    		this.setState({
+    			imgUrl: <img src={VulcanusVault} alt={VulcanusVault} className="background"/>,
+    		});
+    		this.count = 15;
     	}
     }
 
