@@ -31,7 +31,7 @@ class FAQ extends Component {
     				<img src={FAQIcon} className="faq-icon" alt="Settings Icon" onClick={this.closeComponent}/>
 					<div className="blur"></div>
     				<div className="FAQ">
-    					<p>FAQ here please.</p>
+    					<p>Als je vragen hebt of problemen ervaart. Stuur dan een Whatsapp of bel naar 0629361264</p>
     					<button onClick={this.closeComponent}>Close</button>
     				</div>
     			</Fragment>

@@ -10,7 +10,7 @@ class ParentSettings extends Component {
     		return (
     			<Fragment>
     				<div className="ParentSettings">
-    					<p>Settings here please.</p>
+    					<p>De opties zijn nog in ontwikkeling.</p>
     				</div>
     			</Fragment>
     		);

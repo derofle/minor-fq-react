@@ -10,7 +10,7 @@ class MissionFAQ extends Component {
     		return (
     			<Fragment>
     				<div className="MissionFAQ">
-    					<p>FAQ here please.</p>
+    					<p>Als je vragen of problemen ervaart. Stuur dan een Whatsapp of bel naar 0629361264</p>
     				</div>
     			</Fragment>
     		);
