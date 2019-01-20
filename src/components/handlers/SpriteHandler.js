@@ -46,7 +46,7 @@ class SpriteHandler extends Component {
     componentDidUpdate() {
     	this.handleChange();
 	}
-	
+
 	fadeEffect = () => {
 		this.setState({ fade: !this.state.fade });
 		setTimeout(() => this.setState({ fade: !this.state.fade }), 300);

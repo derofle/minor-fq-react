@@ -62,8 +62,8 @@ class GameScreen extends Component {
     			<Fragment>
     				<div className="settings-upperleft"><Settings /></div>
     				<div className="mission-window">
-    					<SpriteHandler character={character} />
-    					<BackgroundHandler location={location} />
+    					<SpriteHandler character={character} type="maincharacter"/>
+    					<BackgroundHandler location={location} className="background-mission"/>
     					<MissionName name={name} fade={this.state.fade}/>
     					<MissionBox dialogue={dialogue} link={link} fade={this.state.fade}/>
     				</div>
@@ -75,7 +75,7 @@ class GameScreen extends Component {
     			<Fragment>
     				<div className="settings-upperleft"><Settings /></div>
     				<div className="transition-window">
-    					<BackgroundHandler location={location} />
+    					<BackgroundHandler location={location}/>
 						<img src={buttonImage} alt={buttonImage} className="buttonImage" onClick={this.props.nextDialogue}/>
     					<button	onClick={(e) => {
 							this.fadeEffect();
