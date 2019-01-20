@@ -74,7 +74,7 @@ class GameScreen extends Component {
     		return (
     			<Fragment>
     				<div className="settings-upperleft"><Settings /></div>
-    				<div className="transition-window">	
+    				<div className="transition-window">
     					<BackgroundHandler location={location} />
 						<img src={buttonImage} alt={buttonImage} className="buttonImage" onClick={this.props.nextDialogue}/>
     					<button	onClick={(e) => {

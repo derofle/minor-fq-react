@@ -3,7 +3,7 @@ import missionboxImage from "../../../images/ui/mission.png";
 
 class MissionBox extends Component {
 	render() {
-		if (this.props.link === "http://fqminor.nl/ar/starmap.html" || this.props.link === "http://fqminor.nl/ar/puzzle.html") {
+		if (this.props.link === "https://trodskey.github.io/FQMinorAR/puzzle" || this.props.link === "https://trodskey.github.io/FQMinorAR/starmap") {
 			return (
 				<div className={`MissionBox ${this.props.fade ? "fade" : ""}`}>
 					<img src={missionboxImage} alt={missionboxImage} className="missionboxImage"/>

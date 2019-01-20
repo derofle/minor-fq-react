@@ -210,7 +210,7 @@ const intitialStory = [
 		location: "Senate",
 		dialogue: "Hallo allemaal, sorry dat ik zo plotseling ben weggelopen. Ik stuur jullie nu wat informatie over het maken van een sterrenkaart. Eerst moeten jullie een hologramscherm pakken. Het zou veel op papier moeten lijken, daarna kunnen jullie de planeten erop tekenen en lijmen zodat het lijkt op een melkweg. Als jullie klaar zijn, maak er dan een toffe foto van!",
 		type: "mission",
-		link: "http://fqminor.nl/ar/starmap.html",
+		link: "https://trodskey.github.io/FQMinorAR/starmap",
 	},
 	{
 		name: "Joksin",
@@ -866,7 +866,7 @@ const intitialStory = [
 		location: "VulcanusVault",
 		dialogue: "Natuurlijk zetten de oude Torlans een slot op de kluis, het was niet genoeg dat we een meer van gesmolten lava moesten oversteken. Gelukkig heb ik een ontcijferaar meegenomen, laat me hem gewoon op je tablet laden. Zodra je het hebt opgelost, laat je het zien aan de missie controle zodat zij het kunnen goedkeuren.",
 		type: "mission",
-		link: "http://fqminor.nl/ar/puzzle.html",
+		link: "https://trodskey.github.io/FQMinorAR/puzzle",
 	},
 	{
 		name: "Joksin",
