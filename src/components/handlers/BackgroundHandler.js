@@ -16,6 +16,8 @@ import VulcanusBase from "../../images/backgrounds/vulcanus-base.png";
 import IntroRose from "../../images/backgrounds/intro-rose.png";
 import IntroKayli from "../../images/backgrounds/intro-kaili.png";
 import VulcanusVault from "../../images/backgrounds/vulcanus-vault.png";
+import IntroTorlaOne from "../../images/backgrounds/intro-torla-1.png";
+import IntroTorlaTwo from "../../images/backgrounds/intro-torla-2.png";
 
 class BackgroundHandler extends Component {
 	static propTypes = {
@@ -132,6 +134,18 @@ class BackgroundHandler extends Component {
     			imgUrl: <img src={VulcanusVault} alt={VulcanusVault} className="background"/>,
     		});
     		this.count = 15;
+		}
+		if (this.props.location === "IntroTorlaOne" && this.count !== 16) {
+    		this.setState({
+    			imgUrl: <img src={IntroTorlaOne} alt={IntroTorlaOne} className="background"/>,
+    		});
+    		this.count = 16;
+		}
+		if (this.props.location === "IntroTorlaTwo" && this.count !== 17) {
+    		this.setState({
+    			imgUrl: <img src={IntroTorlaTwo} alt={IntroTorlaTwo} className="background"/>,
+    		});
+    		this.count = 17;
     	}
     }
 

@@ -23,7 +23,7 @@ class GameScreen extends Component {
     		character: PropTypes.string,
     		dialogue: PropTypes.string,
     		location: PropTypes.string,
-    		type: PropTypes.string,
+			type: PropTypes.string,
     	}),
 		nextDialogue: PropTypes.func,
 	}
@@ -34,7 +34,7 @@ class GameScreen extends Component {
 	}
 
     render() {
-    	const { name, character, dialogue, location, type, sidecharacter } = this.props.details;
+    	const { name, character, dialogue, location, type, sidecharacter, link } = this.props.details;
     	if (type === "dialogue") {
     		return (
     			<Fragment>
@@ -65,13 +65,7 @@ class GameScreen extends Component {
     					<SpriteHandler character={character} />
     					<BackgroundHandler location={location} />
     					<MissionName name={name} fade={this.state.fade}/>
-    					<MissionBox dialogue={dialogue} fade={this.state.fade}/>
-						<img src={buttonImage} alt={buttonImage} className="buttonImage" onClick={this.props.nextDialogue}/>
-    					<button	onClick={(e) => {
-							this.fadeEffect();
-							this.props.nextDialogue();
-							}}
-						 className="next-button">Volgende</button>
+    					<MissionBox dialogue={dialogue} link={link} fade={this.state.fade}/>
     				</div>
     			</Fragment>
     		);

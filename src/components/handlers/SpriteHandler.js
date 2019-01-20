@@ -1,15 +1,28 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 
-import Joksin from "../../images/sprites/joksin.png";
-import Professor from "../../images/sprites/professor.png";
-import Selena from "../../images/sprites/selena.png";
-import Sjaksjok from "../../images/sprites/sjaksjok.png";
-import Tando from "../../images/sprites/tando.png";
-import Morkaas from "../../images/sprites/morkaas.png";
-import Mirabeli from "../../images/sprites/mirabeli.png";
-import Areos from "../../images/sprites/areos.png";
-import Hakaan from "../../images/sprites/hakaan.png";
+// Joksin
+import JoksinNeutral from "../../images/sprites/joksin-neutral.png";
+import JoksinAngry from "../../images/sprites/joksin-angry.png";
+import JoksinHappy from "../../images/sprites/joksin-happy.png";
+import JoksinJoyed from "../../images/sprites/joksin-overjoyed.png";
+
+// Areos
+import AreosNeutral from "../../images/sprites/areos-neutral.png";
+import AreosUncertain from "../../images/sprites/areos-uncertain.png";
+
+// Morkaas
+import MorkaasNeutral from "../../images/sprites/morkaas-neutral.png";
+import MorkaasBored from "../../images/sprites/morkaas-bored.png";
+import MorkaasHappy from "../../images/sprites/morkaas-happy.png";
+
+// Selena
+import SelenaNeutral from "../../images/sprites/selena-neutral.png";
+import SelenaHappy from "../../images/sprites/selena-happy.png";
+import SelenaTired from "../../images/sprites/selena-tired.png";
+
+// Hakaan
+import Hakaan from "../../images/sprites/hakaan-neutral.png";
 
 class SpriteHandler extends Component {
 	static propTypes = {
@@ -40,66 +53,90 @@ class SpriteHandler extends Component {
 	}
 
     handleChange = () => {
-    	if (this.props.character === "Joksin" && this.count !== 1) {
+    	if (this.props.character === "JoksinNeutral" && this.count !== 1) {
     		this.setState({
-				imgUrl: <img src={Joksin} alt={Joksin} className={this.props.type}/>,
+				imgUrl: <img src={JoksinNeutral} alt={JoksinNeutral} className={this.props.type}/>,
     		});
     		this.count = 1;
     	}
-    	if (this.props.character === "Professor Slimvolt" && this.count !== 2) {
+    	if (this.props.character === "JoksinAngry" && this.count !== 2) {
     		this.setState({
-    			imgUrl: <img src={Professor} alt={Professor} className={this.props.type}/>,
+    			imgUrl: <img src={JoksinAngry} alt={JoksinAngry} className={this.props.type}/>,
     		});
     		this.count = 2;
     	}
-    	if (this.props.character === "Selena" && this.count !== 3) {
+    	if (this.props.character === "JoksinHappy" && this.count !== 3) {
     		this.setState({
-    			imgUrl: <img src={Selena} alt={Selena} className={this.props.type}/>,
+    			imgUrl: <img src={JoksinHappy} alt={JoksinHappy} className={this.props.type}/>,
     		});
     		this.count = 3;
     	}
-    	if (this.props.character === "Sjaksjok" && this.count !== 4) {
+    	if (this.props.character === "JoksinJoyed" && this.count !== 4) {
     		this.setState({
-    			imgUrl: <img src={Sjaksjok} alt={Sjaksjok} className={this.props.type}/>,
+    			imgUrl: <img src={JoksinJoyed} alt={JoksinJoyed} className={this.props.type}/>,
     		});
     		this.count = 4;
     	}
-    	if (this.props.character === "Tando Stazak" && this.count !== 5) {
+    	if (this.props.character === "AreosNeutral" && this.count !== 5) {
     		this.setState({
-    			imgUrl: <img src={Tando} alt={Tando} className={this.props.type}/>,
+    			imgUrl: <img src={AreosNeutral} alt={AreosNeutral} className={this.props.type}/>,
     		});
     		this.count = 5;
     	}
-    	if (this.props.character === "Morkaas" && this.count !== 6) {
+    	if (this.props.character === "AreosUncertain" && this.count !== 6) {
     		this.setState({
-    			imgUrl: <img src={Morkaas} alt={Morkaas} className={this.props.type}/>,
+    			imgUrl: <img src={AreosUncertain} alt={AreosUncertain} className={this.props.type}/>,
     		});
     		this.count = 6;
     	}
-    	if (this.props.character === "Mirabeli" && this.count !== 7) {
+    	if (this.props.character === "MorkaasNeutral" && this.count !== 7) {
     		this.setState({
-    			imgUrl: <img src={Mirabeli} alt={Mirabeli} className={this.props.type}/>,
+    			imgUrl: <img src={MorkaasNeutral} alt={MorkaasNeutral} className={this.props.type}/>,
     		});
     		this.count = 7;
     	}
-    	if (this.props.character === "Areos" && this.count !== 8) {
+    	if (this.props.character === "MorkaasHappy" && this.count !== 8) {
     		this.setState({
-    			imgUrl: <img src={Areos} alt={Areos} className={this.props.type}/>,
+    			imgUrl: <img src={MorkaasHappy} alt={MorkaasHappy} className={this.props.type}/>,
     		});
     		this.count = 8;
 		}
 
-		if (this.props.character === "Hakaan" && this.count !== 9) {
+		if (this.props.character === "MorkaasBored" && this.count !== 9) {
     		this.setState({
-    			imgUrl: <img src={Hakaan} alt={Hakaan} className={this.props.type}/>,
+    			imgUrl: <img src={MorkaasBored} alt={MorkaasBored} className={this.props.type}/>,
     		});
     		this.count = 9;
 		}
-		if (this.props.character === "none" && this.count !== 10) {
+		if (this.props.character === "SelenaNeutral" && this.count !== 10) {
+    		this.setState({
+    			imgUrl: <img src={SelenaNeutral} alt={SelenaNeutral} className={this.props.type}/>,
+    		});
+    		this.count = 10;
+		}
+		if (this.props.character === "SelenaHappy" && this.count !== 11) {
+    		this.setState({
+    			imgUrl: <img src={SelenaHappy} alt={SelenaHappy} className={this.props.type}/>,
+    		});
+    		this.count = 11;
+		}
+		if (this.props.character === "SelenaTired" && this.count !== 12) {
+    		this.setState({
+    			imgUrl: <img src={SelenaTired} alt={SelenaTired} className={this.props.type}/>,
+    		});
+    		this.count = 12;
+		}
+		if (this.props.character === "Hakaan" && this.count !== 13) {
+    		this.setState({
+    			imgUrl: <img src={Hakaan} alt={Hakaan} className={this.props.type}/>,
+    		});
+    		this.count = 13;
+		}
+		if (this.props.character === "none" && this.count !== 14) {
     		this.setState({
     			imgUrl: null,
     		});
-    		this.count = 10;
+    		this.count = 14;
     	}
     }
 
